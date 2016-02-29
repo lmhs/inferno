@@ -1,0 +1,263 @@
+.basket
+  height: 700px
+
+.basket-items
+  clearfix()
+
+.price, .change
+  display: block
+
+.basket-item
+  position: relative
+  width: 220px - 24px
+  height: 290px - 27px
+  border: 1px solid #cccccc
+  float: left
+  margin-right: 20px
+  padding: 27px 0 0 24px
+  box-shadow: 3px 3px 0px 0px rgba(51, 51, 51, 0.32)
+  transition: 0.5s ease
+  &:hover
+    border: 1px solid black
+    transition: 0.5s ease
+  .name
+    display: inline-block
+    width: 175px
+
+.connect:before
+  content: ''
+  position: absolute
+  top: 30px
+  left: 207px
+  width: 50px
+  height: 20px
+  background: url(imgPath + 'connect.png') no-repeat
+
+.name, .breadcrumps
+  display: inline-block
+
+.breadcrumps
+  width: 800px
+  text-align right
+
+.basket-item .name
+  font-weight: bold
+
+.breadcrumps ul li
+  display: inline-block
+
+.basket-item .change
+  padding: 20px 0 0 0
+  color: #336699
+
+.basket-item .description
+  margin 30px 0 0 0
+  height: 100px
+  display: block
+
+.basket-item ul
+  list-style: none
+  margin: 0
+  padding: 30px 0 0 0
+  height: 120px
+  font-size: 14px
+
+.basket-item .icon-close-dark-sm
+  position: absolute
+  left: 190px
+  top: 10px
+
+.basket .total
+  clear: both
+  font-weight: bold
+  padding 35px 0 0 0
+  
+.basket-pay
+  .total
+    padding: 0
+    margin: 5px 0 0
+    
+    span
+      boldFont()
+      font-size: 18px
+      
+    a
+      baseFont()
+      font-size: 14px
+      color: colors.link
+      margin-left: 12px
+      
+  hr
+    margin 17px 0 21px
+    
+  .select-payment
+    margin-bottom: 37px
+    
+  .payment-system
+    height: 78px
+    border: 1px solid #ccc
+    margin: 0 20px 20px 0
+    position: relative
+    
+    &:hover
+      border-color: colors.accent
+        
+      .btn-lg
+        opacity: 1
+    
+    &.small
+      width: 298px
+      float: left
+      
+    &.large
+      width: 938px
+      
+    .btn-lg
+      boldFont()
+      position: absolute
+      right: 0
+      top: 19px
+      opacity: 0
+      transition: opacity 0.5s linear 0s
+      right: -9px 
+
+    &.paypal
+      background: url(imgPath + 'paypal-big.jpg') no-repeat 33px 0
+      
+    &.paxum
+      background: url(imgPath + 'paxum-big.jpg') no-repeat 33px 0
+      
+    &.webmoney
+      background: url(imgPath + 'webmoney-big.jpg') no-repeat 33px 0
+      
+    &.intercassa
+      background: url(imgPath + 'intercassa-big.jpg') no-repeat 33px 0
+      
+  .other-paymments
+    width: 940px
+    text-align: right
+
+.basket-item.add-item
+  position: relative
+  .btn-add-item
+    position: absolute
+    text-transform: uppercase
+    boldFont()
+    bottom: 54px
+    left: 115px
+    font-size: 16px
+
+.basket .breadcrumps .active
+  color: colors.link
+
+.basket
+  .paymethod
+    margin-top: 80px
+    margin-left: 30px
+    float: left
+    div
+      display: inline-block
+  .to-pay
+    display: block
+    text-transform: uppercase
+    boldFont()
+    margin-top: 80px
+    float: left
+
+.basket-registration
+  .name
+    font-size: 18px
+    
+    h1
+      display: inline-block
+      font-size: 30px
+      
+    span
+      color: colors.desc
+      padding: 0 8px
+  .registration-fields
+    width: 530px
+  
+    .form-md
+      width: 227px
+      height: auto
+      boldFont()
+      font-size: 18px
+      padding: 7px 0 7px 11px
+      cursor: pointer
+      position: relative
+      margin: 20px 0 20px
+      float: none
+      
+      &:after
+        content: ''
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 0 0 6px 6px
+        border-color: transparent transparent colors.yellow-triangle transparent
+        position: absolute
+        left: 227px
+        bottom: 5px
+        
+    .fields-box .field:nth-child(2n)
+      margin-left: 40px
+        
+    .field
+      height: 70px
+      display: inline-block
+      position: relative
+      margin-bottom: 9px
+      
+      input
+        width: 218px
+        boldFont()
+        font-size: 18px
+        background: none
+        border-top: none
+        border-right: none
+        border-bottom: 1px solid colors.subtleBorder
+        border-left: none
+        padding: 7px 11px
+        
+        &:focus
+          background: #eceaeb
+          border-bottom: 1px solid colors.desc
+          
+      .info-box
+        width: 218px
+        mediumFont()
+        font-size: 12px
+        color: colors.desc
+        padding: 8px 11px
+        position: relative
+        top: 0
+        
+        &.top-pos
+          top: -33px
+        
+        span
+          text-transform: uppercase
+        
+        .info
+          float: right
+          
+    hr
+      width: 1087px
+          
+    textarea
+      width: 505px
+      border: none
+      resize: none
+      background: none
+      padding: 7px 11px
+      
+    .btn-lg
+      display: inline-block
+      boldFont()
+      text-transform: uppercase
+      margin: 15px 0 0
+      color: #231F20
+      &:visited
+        color: #231F20
+

@@ -1,0 +1,36 @@
+$content
+  position: absolute
+  width: 90%
+  height: 100%
+  right: 0
+  top: 0
+
+{prefix}-content
+  @extend $content
+  z-index: depth.pageContent
+  overflow-y: auto
+  overflow-x: hidden
+
+  &-wrapper
+    fill()
+    right: -130%
+    top: 0
+    background: rgba(247, 247, 247, 0)
+    z-index: depth.pageContentWrapper
+    transition: transform duration.transition ease,
+      background (duration.transition * .75) ease (duration.transition * .8 * .75)
+
+  &-shape
+    position: absolute
+    left: (skewWidth / 4 * -1 + 0.08)
+    top: 0
+    width: (skewWidth / 2)
+    height: 100%
+    background-size: 100% 100%
+    background-position: center center
+    background-image: url(svgPath + 'triangle_bottom_white.svg')
+
+{prefix}-fixedcontent
+  @extend {prefix}-content
+  z-index: depth.pageFixedContent
+  background: colors.background

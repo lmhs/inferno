@@ -1,0 +1,211 @@
+// Fix the cursor style for Chrome's increment/decrement buttons. For certain
+// `font-size` values of the `input`, it causes the cursor style of the
+// decrement button to change from `default` to `text`.
+input[type='number']::-webkit-inner-spin-button
+input[type='number']::-webkit-outer-spin-button
+  height auto
+
+
+input[type='number']
+  -moz-appearance textfield
+
+input[type='number']:hover
+input[type='number']:focus
+  -moz-appearance number-input
+
+
+input[type='number']::-webkit-outer-spin-button
+input[type='number']::-webkit-inner-spin-button
+  margin 0
+
+  -webkit-appearance none
+
+
+
+.field-wrap
+  position relative
+  // margin-y 20px
+  &--is-invalid
+    .field
+      border-bottom-color red
+  &--is-disabled
+    &:after
+      content ''
+      background url('../img/lock-icon.png')
+      background-size 12px 12px
+      width 12px
+      height 12px
+      display block
+      position absolute
+      top 14px
+      right 16px
+
+
+.input
+  height 40px
+  padding-x 12px
+  width 100%
+  box-sizing border-box
+
+.textarea
+  height 120px
+  padding 12px 12px
+
+.field
+  background-color rgba(51, 51, 51, 0.05)
+  border none
+  border-bottom 1px solid #231f20
+  font-size 16px
+  line-height 20px
+  color #333
+  width 100%
+  font-family whitney
+  font-weight normal
+  &:focus
+    background-color rgba(51, 51, 51, 0.1)
+    outline none
+    & + .label
+      transform translate3d(-46px, -30px, 0) scale(.75)
+
+      color #8B7B7F
+      visibility visible
+
+    & ~ .field-triangle
+      border-color transparent transparent rgba(51, 51, 51, 0.1) transparent
+
+  &--is-filled
+    & + .label
+      transform translate3d(-46px, -30px, 0) scale(.75)
+      visibility hidden
+
+  &.placeholder
+    color #999
+    font-size 16px
+  &::placeholder
+    color #999
+    font-size 16px
+
+  &--is-search
+    background-color #FFF
+
+  &[disabled='true']
+    color #999
+    border-color #CCC
+
+.field-triangle
+  position absolute
+  left -21px
+  top 0
+  width 0
+  height 0
+  border-style solid
+  border-width 0 0 40px 21px
+  border-color transparent transparent #FFF transparent
+
+  &:after
+    content ''
+    top 39px
+    display block
+    position absolute
+    left -21px
+    width 21px
+    height 1px
+    background-color #231f20
+
+
+.field-icon
+  position absolute
+  top 13px
+  right 13px
+  font-size 12px
+  font-weight medium
+  text-transform uppercase
+  display inline-block
+  user-select none
+  font-family whitney
+  &--good
+    top 16px
+    font-size 10px
+    color #369946
+  &--bad
+    top 16px
+    font-size 10px
+    color red
+  &--tooltip
+    font-weight normal
+    color #369
+    right 16px
+    .field-wrap--is-invalid &
+      color red
+  &:before
+    position absolute
+    top 0
+    right -16px
+    width 60px
+    height 40px
+  &:hover
+    &:before
+      content ''
+    & + .field-tooltip
+      display block
+
+.field-tooltip
+  background-color rgba(35, 31, 32, .9)
+  font-family openSans
+  color #FFF
+  font-weight regular
+  font-size 13px
+  line-height 15px
+  padding 17px 72px 17px 17px
+  position absolute
+  display none
+  top 45px
+  z-index 1
+  &:hover
+    display block
+  &:after
+    content ''
+    width 0
+    height 0
+    border-style solid
+    border-width 10px 0 0 10px
+    border-color transparent transparent transparent  rgba(35, 31, 32, .9)
+    position absolute
+    top -10px
+    right 18px
+
+  &__help
+    position absolute
+    top 16px
+    right 16px
+    color #8B7B7F
+    text-decoration none
+    &:hover
+      color #fff
+
+.label
+  color #999
+  font-size 16px
+  position absolute
+  left 0
+  top 0
+  width 100%
+  overflow hidden
+  min-height 40px
+  padding-x 12px
+  cursor text
+  line-height 40px
+  user-select none
+  -webkit-touch-callout none
+  pointer-events none
+  transition transform 0.3s
+
+.slider__field-wrap
+  width 100px
+  margin-top 20px
+
+.knowledge__input
+  padding-left 6px
+
+.knowledge__label
+  padding-left 6px

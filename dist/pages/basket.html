@@ -1,0 +1,75 @@
+<div class="container-content container-wmenu basket">
+  <section class="basket">
+  <div class="name">
+    <h1>Корзина</h1>
+  </div>
+    <div class="breadcrumps">
+      <ul>
+        <li class="active">1.Корзина</li>
+        <li>- 2.Оплата</li>
+        <li>- 3.Реквезиты</li>
+      </ul>
+    </div>
+    <div class="basket-items">
+      <div class="basket-item">
+        <span class="name">VPS Medium</span>
+        <ul>
+          <li>XEN, CPU: 2.66GHz, </li>
+          <li>RAM: 1024 Mb, </li>
+          <li>Traffic: 1500 GB, </li>
+          <li>IP: 1, Нидерланды</li>
+        </ul>
+        <span class="price"><b>$120</b> <br>в год</span>
+        <a class="change" href="#">Изменить</a>
+      </div>
+      <div class="basket-item connect">
+        <span class="name">Domain</span>
+        <ul>
+          <li>isolutions.com</li>
+        </ul>
+        <span class="price"><b>$10</b> <br> в год</span>
+      </div>
+      <div class="basket-item add-item">
+        <div class="icon-close-dark-sm"></div>
+        <span class="name">SSL Сертификат</span>
+        <ul>
+          <li>GeoTrust QuickSSL Basic</li>
+        </ul>
+        <span class="price"><b>+$10</b> <br>в год</span>
+        <a href="#" class="btn btn-send btn-add-item">Добавить</a>
+        <a class="change" href="#">Для чего это нужно?</a>
+      </div>
+      <div class="basket-item">
+        <span class="name">Wordpress.Ва$$илич Style</span>
+        <span class="description">Готовое решение от Василия Петровича.
+            Усиленая защита</span>
+        <span class="price">Бесплатно</span>
+      </div>
+    </div>
+    <div class="total">
+      <span>Итог: $130 в год</span>
+    </div>
+      <a href="#/basket_pay" class="btn-lg to-pay">Перейти к оплате</a>
+        <div class="paymethod">
+        <div class="icon-paypal"></div>
+        <div class="icon-paxum"></div>
+        <div class="icon-webmoney"></div>
+    </div>
+    </div>
+  </section> <!-- ./ basket -->
+
+<script>
+  // Hack for hide rollout bug 
+  $(function() {
+    var str = (location.href),
+        appPosition = str.substring(str.length - 5);
+    if (appPosition) {
+      $('.page-rollout').hide();
+    }
+    $('.page-backbutton').on('click', function() {
+      setTimeout(function() {
+           $('.page-rollout').show();
+      }, 1000);
+    })
+  })
+</script>

@@ -1,0 +1,98 @@
+{prefix}-menu
+  width: 210px
+  float: left
+  margin-right: 40px
+
+  &-wrapper
+    position: absolute
+    width: 230px
+    left: 84%
+    top: 38%
+    text-transform: uppercase
+    overflow: hidden
+    z-index: depth.pageMenu
+    transition: left duration.transition ease,
+      top duration.transition ease
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+
+    a
+      boldFont()
+      position: relative
+      width: 70%
+      font-weight: bold
+      font-size: fontSize.menu
+      color: colors.lightText
+      display: block
+      line-height: 40px
+      padding-left: 32px
+      transition: color .2s ease,
+        background .2s ease
+
+      &:hover
+        text-decoration: none
+
+      &.active
+        position: relative
+        background: colors.accent
+
+        &:after
+          border-top-color: colors.accent
+
+        &:before
+          border-bottom-color: colors.accent
+
+        & + ul
+          display: block
+
+      &:after,
+      &:before
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border-style: solid
+        transition: border-color .2s ease
+
+      &:after
+        border-color: rgba(255, 255, 255, 0) transparent transparent transparent
+        border-width: 40px 20px 0 0
+        right: -20px
+
+      &:before
+        border-color: transparent transparent rgba(255, 255, 255, 0) transparent
+        border-width: 0 0 40px 20px
+        left: -20px
+
+      & + ul
+        width: 230px
+
+      &:hover
+        color: colors.lightText - #353535
+
+    ul ul
+      display: none
+      border-left: 3px solid colors.accent
+
+      & a
+        bookFont()
+        text-transform: none
+        font-weight: normal
+
+  &s
+    width: 530px
+    transition: transform duration.transition ease
+
+    &.show-submenu
+      transform: translateX(-40%)
+
+  &-secondary
+    text-align: right
+    width: 180px
+
+    a
+      padding-left: 0
+      padding-right: 16px

@@ -1,0 +1,367 @@
+.select-server,
+.select-os,
+.select-cpu,
+.select-hdd,
+.select-control-panel,
+.select-period
+  clearfix()
+
+// ----------------------------------
+// @Main
+// ----------------------------------
+
+.pricing-forms
+  clearfix()
+  width: 600px
+
+.form-sm
+  width: 89px
+  height: 34px
+  border: 1px solid colors.subtleBorder
+  display: inline-block
+  background: colors.form-bg
+  transition: all 1s ease
+  &:hover
+    background: #fff
+    transition: all 1s ease
+    border: 1px solid #cdcdcd
+
+.form-md
+  width: 178px
+  height: 48px
+  border: 1px solid colors.subtleBorder
+  float: left
+  margin: 0 9px 10px 0
+  background: colors.form-bg
+  transition: all 1s ease
+  &:hover
+    background: #fff
+    transition: hover 1s ease
+
+.form-lg
+  width: 368px
+  height: 48px
+  border: 1px solid colors.subtleBorder
+  float: left
+  margin: 0 9px 10px 0
+  background: colors.form-bg
+  transition: all 1s ease
+  &:hover
+    background: #fff
+    transition: hover 1s ease
+
+.pricing-forms .name
+  boldFont()
+  font-size: 18px
+  padding: 8px 0 11px 8px
+  line-height: 0.5
+
+.pricing-forms .desc
+  mediumFont()
+  font-size: 12px
+  text-transform: uppercase
+  color: colors.desc
+  padding: 0px 0 0px 8px
+  font-weight: normal
+
+.select-server
+  margin: 29px 0 24px 0px
+  position: relative
+
+  .server
+    margin: 0px 0 0 5px
+
+  .name
+    font-size: 16px
+    padding: 13px 0 0px 9px
+    line-height: 0.5
+
+  span
+    mediumFont()
+    font-size: 16px
+
+.select-os .traffic
+  @extend .form-md
+  border: 0
+  background: transparent
+  .name
+    font-size: 30px
+
+.select-cpu .ram
+  border: 0
+  background: transparent
+
+.select-hdd
+  span
+    color: colors.divider-text
+
+  .hdd-plus
+    color: colors.grey
+    margin-right: 206px
+    .desc
+      color: colors.grey
+
+  .channel
+    border: 0
+    background: transparent
+
+.control-panel-admin
+  position: relative
+  .name
+    color: colors.grey
+
+// ----------------------------------
+// @Triangle icons
+// ----------------------------------
+
+.server,
+.os,
+.capacity,
+.cpu,
+.ssd,
+.sata,
+.program,
+.hdd-plus,
+.control-panel,
+.ip,
+.select-period
+  position: relative
+
+.control-panel-admin:after
+  content: ''
+  width: 0
+  height: 0
+  border-style: solid;
+  border-width: 0 0 6px 6px
+  border-color: transparent transparent colors.red-triangle transparent
+  position: absolute
+  top: 38px
+  left: 358px
+
+ .cpu:after, .control-panel:after
+  @extend .control-panel-admin:after
+  border-color: transparent transparent colors.yellow-triangle transparent
+
+.os:after, .capacity:after, .ssd:after, .sata:after, .program:after,
+.hdd-plus:after, .ip:after, .select-period:after
+  @extend .cpu:after
+  left: 168px
+
+.server:after
+  @extend .os:after
+  left: 78px
+  top: 22px
+
+// ----------------------------------
+// @Bottom content
+// ----------------------------------
+
+.bottom-content
+  margin-bottom: 200px
+
+.bottom-content-title
+  font-size: 18px
+  boldFont()
+  margin: 34px 0 0 0
+
+.bottom-content-item
+  margin: 20px 0 0 0
+  width: 544px
+  position: relative
+  font-size: 14px
+  .item-title
+    boldFont()
+    font-size: 16px
+    margin-bottom: 3px
+  &:before
+    content: ''
+    position: absolute
+    top: 2px
+    left: -60px
+
+.pdf,
+.cms
+  position: relative
+
+.pdf-title,
+.cms-title
+    @extend .bottom-content-item .item-title
+
+.pdf-description
+  width: 485px
+
+.pdf a
+  display: inline-block
+  margin: 25px 0 30px 0
+  span
+    color: colors.separator
+    display: inline-block
+    padding: 0 8px
+
+// Content bottom icons
+.bottom-content .admin:before
+  @extend .icon-admin-md.dark
+
+.bottom-content .monitor:before
+  @extend .icon-monitor-md.dark
+
+.bottom-content .resources:before
+  @extend .icon-resources-md.dark
+
+.bottom-content .backup:before
+  @extend .icon-backup-md.dark
+
+.bottom-content .schedule:before
+  @extend .icon-schedule-md.dark
+
+.bottom-content .pdf:before
+  @extend .icon-pdf-md.dark
+  content: ''
+  position: absolute
+  top: 2px
+  left: -60px
+
+.bottom-content .cms:before
+  @extend .icon-cms-md.dark
+  content: ''
+  position: absolute
+  top: 2px
+  left: -60px
+
+.add-order-pricing
+  width: 185px
+  position: fixed
+  left: -14px
+  margin-left: 63%
+  top: 114px
+  z-index: 1500
+  height: 300px
+  padding: 20px 10px 20px 20px
+  overflow: hidden
+  .link.add
+    margin: 0 0 20px 0
+  .order-help
+    margin: 14px 0 0 0
+    mediumFont()
+    font-size: 16px
+    color: colors.secondaryText
+    &:last-of-type
+      margin: 0
+  .pay-methods
+    &-title
+      boldFont()
+      font-size: 18px
+      margin: 40px 0 0 0
+    .paypal
+      @extend .icon-paypal
+      display: inline-block
+      margin: 0 -10px 0
+    .paxum
+      @extend .icon-paxum
+      display: inline-block
+    .web-money
+      @extend .icon-webmoney
+      margin: -17px 0 0 0
+      a
+        display: block
+    a
+      display: block
+      margin: 10px 0 0 0
+
+@media only screen and (min-width: 1600px) and (max-width: 1999px)
+  .add-order-pricing
+    margin-left: 900px
+
+@media only screen and (min-width: 2000px)
+  .add-order-pricing 
+    margin-left: 1050px
+
+
+.pay-methods a:visited
+  color: colors.link
+
+
+.show-plas-price
+  display: block
+
+
+.page-menu.page-menu-secondary
+  display: none
+
+
+// Plans-tab-menu
+
+.plans-tab-menu
+  text-align: right
+  width: 180px
+  text-transform: uppercase
+  color: black
+  position: absolute
+  left: -105px
+  z-index: 99999
+  top: 136px
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+    width: 180px
+    li
+      boldFont()
+      position: relative
+      width: 178px
+      font-weight: bold
+      font-size: fontSize.menu
+      display: block
+      line-height: 40px
+      padding-left: 0
+      padding-right: 16px
+      height: 40px
+      &.active
+        background: url("../img/tab-btn.png") no-repeat
+        display: block
+        width: 183px
+        height: 40px
+        background-position: 35px 0
+        color: black
+      a
+        color: black
+        display: block
+        width: 180px
+        height: 40px
+        &:hover
+          text-decoration: none
+
+.index-configuration
+  text-align: right
+  width: 180px
+  text-transform: uppercase
+  color: black
+  position: absolute
+  left: -25px
+  z-index: 99999
+  top: 199px
+  width: 131px
+  .conf-name 
+    boldFont()
+    font-size: 24px
+  .level
+    boldFont()
+    font-size: 16px
+  .sub-title
+    font-size: 12px
+    color: colors.desc
+
+.container-narrow
+  margin-left: 40px
+  background: #f7f7f7
+  z-index: 1000
+
+.plans-title
+  margin-top: 77px
+  margin-right 10px
+  font-size: 24px
+  margin-bottom: 0
+
+
+.hosting-pricing
+  margin: 0 5%

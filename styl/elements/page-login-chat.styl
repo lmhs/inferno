@@ -1,0 +1,127 @@
+.login-form
+  top: -370px
+  position: absolute
+  width: 300px
+  height: 360px
+  background: white
+  right: 10px
+  z-index: 9999
+  border-bottom: 2px solid colors.accent
+  &-title
+    boldFont()
+    font-size: 24px
+    padding: 22px 21px 0 21px
+    display: inline-block
+    width: 214px
+  .restore-access
+    padding: 51px 0 0 21px
+    display: block
+    &:visited
+      color: colors.link
+  &-btn-close
+    font-size: 30px
+    transform: rotate(45deg)
+    display: inline-block
+    cursor: pointer
+
+.form-login
+  padding: 0px 21px 0px 21px
+  input
+    width: 260px
+    height: 35px
+    border: 0
+    border-bottom: 2px solid colors.subtleBorder
+    margin-top: 20px
+    mediumFont()
+    text-indent: 5px
+    transition: all 1s ease
+    &:hover
+      background: #eceaeb
+      border-bottom: 2px solid #8b7b7f
+      transition: all .5s ease
+      cursor: pointer
+  .btn.login-btn
+    margin: 20px 0 0 0
+    boldFont()
+
+
+.online-chat
+  display: none
+  position: absolute
+  bottom: 0px
+  right: 1px
+  z-index: 9999
+  width: 270px
+  height: 460px
+  
+  &-header
+    height: 40px
+    background: url(imgPath + 'chat-header.png') no-repeat
+    position: relative
+  &-title
+    boldFont()
+    padding: 9px 40px
+    font-size: 16px
+    display: inline-block
+    width: 85px
+  &-close-btn
+    font-size: 30px
+    transform: rotate(45deg)
+    display: inline-block
+    cursor: pointer
+    position: absolute
+    right: 12px
+    bottom: 1px
+  &-body
+    background: white
+    height: 360px
+    padding: 11px 0
+    .admin-item
+      clearfix()
+      margin-bottom: 25px
+      .admin-msg
+        float: left
+        width: 133px
+      .admin-icon
+        width: 30px
+        height: 30px
+        background: url(imgPath+'admin-icon.png') no-repeat
+        float: left
+        padding-right: 10px
+      .admin-name
+        font-weight: bold
+        font-size: 16px
+    .user-item
+      clearfix()
+      margin-bottom: 25px
+      .user-msg
+        float: left
+        width: 170px
+      .user-icon
+        width: 30px
+        height: 30px
+        background: url(imgPath+'icon-user.png') no-repeat
+        float: left
+        padding-right: 10px
+      .user-name
+        font-weight: bold
+        font-size: 16px
+  .online-chat-footer
+    height: 70px
+    background: white
+    position: relative
+    bottom: 30px
+    input
+      margin: 0px 0 0 20px
+      width: 155px
+      height: 24px
+    .send-message
+      background: url(imgPath + 'chat-icon.png') no-repeat
+      height: 40px
+      width: 60px
+      display: inline-block
+      position: absolute
+button
+  background none
+  border 0
+  outline 0

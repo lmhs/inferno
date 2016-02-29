@@ -1,0 +1,209 @@
+{prefix}-storage
+  &-header-title
+    width: 600px
+    margin-top: 208px
+    h1
+      margin: 0 0 5px 0
+    h2
+      margin: 0 0 30px 0
+  &-solid
+    margin-top: 112px
+    width: 940px
+    opacity: .98
+
+
+.is-logo-icon
+  color: colors.accent
+
+.slider-description-storage .storage-title
+  padding-top: 18px
+  font-size: 24px
+  boldFont()
+  margin: 35px 0 27px 0
+
+.slider-text-first
+  margin: 0 45px 57px 0
+
+.advantages .advantages-title
+  font-size: 18px
+  boldFont()
+
+// Storage-plans
+
+{prefix}-storage
+  &-plans
+    width: 940px
+    height: 340px
+  &-amount
+    bookFont()
+    font-size: 18px
+    display: inline-block
+    padding: 0
+    li
+      display: inline-block
+      margin-right: 24px
+      &:last-of-type
+        margin-right: 0
+    &-amount-high
+      display: inline-block
+      boldFont()
+      font-size: 18px
+      padding: 0
+      li
+        display: inline-block
+        margin-left: 40px
+        &:last-of-type
+          margin-right: 0
+
+{prefix}-storage
+  &-select
+    margin-top: 50px
+  &-options
+    width: 315px
+    float: left
+  &-description
+    width: 470px
+    float: left
+  &-order
+    float: left
+    width: 100px
+  &-options
+    .name
+      font-size: 18px
+      boldFont()
+    .desc
+      text-transform: uppercase
+      color: colors.desc
+  &-item
+    margin-bottom: 25px
+
+  &-item-in
+    display: inline-block
+    width: 140px
+    &.drop
+      border: 1px solid colors.subtleBorder
+      padding: 5px
+      width: 130px
+      position: relative
+
+.drop:after
+  content: ''
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 6px 6px;
+  border-color: transparent transparent colors.red-triangle transparent;
+  position: absolute
+  top: 38px
+  left: 125px
+  border-color: transparent transparent colors.yellow-triangle transparent;
+
+
+
+.advantages .advantage-item
+  margin: 30px 0 0 0
+  width: 744px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 2px
+    left: -60px
+
+{prefix}-storage
+  position: relative
+  height: 400px
+  width: 1470px
+  margin-left: 3%
+  overflow: hidden
+  background: url(imgPath + 'storage-slide-bg.png')
+  background-position: top center
+  background-size: cover
+  box-shadow: inset 0 -8px 0 colors.accent
+  bottom: 10px
+
+  &:before,
+  &:after
+    position: absolute
+    content: ''
+    top: 0
+    width: 0
+    height: 0
+    border-style: solid
+
+  &:before
+    left: -1px
+    border-color: colors.background transparent transparent transparent
+    border-width: 400px 200px 0 0
+
+  &:after
+    right: -1px
+    border-color: transparent transparent colors.background transparent
+    border-width: 0 0 400px 200px
+
+.advantages .item-title
+  font-size: 16px
+  boldFont()
+
+.pdf .item-title
+  @extend .advantages .item-title
+
+// Icons
+
+
+.advantages .copy:before
+  @extend .icon-copy-md.dark
+
+.advantages .order:before
+  @extend .icon-order-md.dark
+
+.advantages .security:before
+  @extend .icon-security-md.dark
+
+.advantages .recovery:before
+  @extend .icon-recovery-md.dark
+
+.advantages .access:before
+  @extend .icon-access-md.dark
+
+.advantages .equipment:before
+  @extend .icon-equipment-md.dark
+
+.advantages .support:before
+  @extend .icon-support-md.dark
+
+.advantages .service:before
+  @extend .icon-service-md.dark
+
+.advantages .paymethod:before
+  @extend .icon-paymethod-md.dark
+
+.advantages .actions:before
+  @extend .icon-actions-md.dark
+
+.pdf:before
+  content: ''
+  position: absolute
+  top: 2px
+  left: -60px
+  @extend .icon-pdf-md.dark
+
+
+{prefix}-storage
+  .bg-corner
+    height: 376px
+    width: 1000px
+    position: absolute
+    left: 95%
+    bottom: 0
+    background-color: colors.yellow-triangle
+    opacity: 0.6
+    transform: skew(-27deg, 0)
+    -webkit-animation: bg-corner 0.5s forwards
+    -webkit-animation-delay: 0.5s
+    animation: bg-corner 0.5s forwards
+    animation-delay: 1s
+
+.page-help.storage
+  width: 964px
+  background-size: 100% 441px

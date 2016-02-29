@@ -1,0 +1,153 @@
+
+blog-colors = {
+  more-bg: #e1e1e1
+  copyright: #745e5b
+}
+
+.container-content.page-blog
+  margin: 0 auto
+  width: 636px
+
+.blog .title
+  boldFont()
+  font-size: 24px
+  margin: 40px 0 0 0
+
+.blog
+  &-title
+    margin: 60px 0 0 0
+    
+.blog section > .subtitle
+  mediumFont()
+  font-size: 12px
+  color: colors.desc
+
+.blog .news
+  width: 643px
+  p
+    font-size: 14px
+    margin: 20px 0
+  .btn
+    margin: 20px 0 60px 0
+    text-transform: uppercase
+    display: block
+    width: 190px
+    background: url("../img/btn-sprite.jpg") no-repeat
+    background-position: -60px -40px
+    color: colors.darkText
+    &:hover
+      background-position: -60px 0px
+    &:visited
+      color: black
+
+.discounts
+  width: 635px
+
+.discount-card
+  background: url(imgPath + 'blog/blog-banner.jpg') no-repeat
+  width: 635px
+  height: 260px
+  margin: 20px 0 20px 0
+  .title
+    margin: 42px 0 0 0
+
+.discount-card-inner
+  padding: 21px 0 21px 21px
+  position: relative
+  height: 218px
+  .title
+    margin: 0
+  .subtitle
+    bookFont()
+    font-size: 18px
+    margin: 16px 0 0 0
+    width: 190px
+    text-transform: none
+    color: colors.darkText
+  .action
+    bookFont()
+    font-size: 12px
+    position: absolute
+    bottom: 19px
+  .btn
+    display: block
+    width: 280px
+    background: url("../img/btn-sprite.jpg") no-repeat
+    background-position: -2px -40px
+    color: colors.darkText
+    position: absolute
+    bottom: 59px
+    &:hover
+      background-position: -2px 0px
+
+.drop-news
+  position: relative
+  width: 635px
+  img
+    width: 635px
+  .title
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: -38px
+      top: 3px
+      @extend .icon-minus-sm
+  .roll
+    margin: 0 0 58px 0
+
+.show-more-news
+  width: 100%
+  height: 40px
+  font-size: 14px
+  background: blog-colors.more-bg
+  text-align: center
+  display: block
+  margin-bottom: 120px
+  a
+    display: block
+    height: 31px
+    padding: 9px 0 0 0
+    color: black
+    transition: all .5s ease
+    &:hover
+      transition: all .5s ease
+      background: #b7b6b6
+      text-decoration: none
+
+.blog-footer
+  width: 100%
+  height: 110px
+  margin: 120px 0 0 0
+  background: url(imgPath + '/blog/blog-footer.jpg') no-repeat
+  background-size: cover
+  margin: 0
+  padding: 0
+
+  .copyright
+    padding: 45px 0 0
+    color: colors.lightText
+    opacity: 0.3
+    span
+      color: colors.accent
+
+.page-header-options .page-header-options-login
+  @extend .icon-exit-dark-sm
+  position: relative
+  float: right
+  cursor: pointer
+  color: black
+
+
+.page-header-options .page-header-options-lang
+  color: black
+  &:after
+    content: ''
+    position: absolute
+    bottom: -1px
+    right: -5px
+    width: 0px
+    height: 0px
+    border-style: solid
+    border-width: 0 0 5px 5px
+    border-color: transparent transparent black transparent

@@ -1,0 +1,70 @@
+.anim-logo
+  boldFont()
+  font-size: 19px
+  margin: 0 0 0 30px
+
+.star 
+  color: colors.accent
+  position: relative
+  right: 1px
+
+.center 
+  opacity: 1
+  display: inline
+  -moz-animation: center .3s 1s
+  -moz-animation-iteration-count: 1
+  -moz-animation-fill-mode: forwards
+  -webkit-animation: center .3s 1s
+  -webkit-animation-iteration-count: 1
+  -webkit-animation-fill-mode: forwards
+
+
+.last 
+  position: relative
+  right: 0
+  animation: last .3s 1.2s
+  -moz-animation-fill-mode: forwards
+  -webkit-animation: last .3s 1.2s
+  -webkit-animation-iteration-count: 1
+  -webkit-animation-fill-mode: forwards
+
+
+.blog-logo
+  position: absolute
+  left: 45px
+  opacity: 0
+  -moz-animation: blog .3s 2s ease
+  -moz-animation-fill-mode: forwards
+  -webkit-animation: blog .3s 2s ease
+  -webkit-animation-fill-mode: forwards
+
+
+//  Logo animation
+//  Only on blog page
+
+
+@-moz-keyframes center 
+  from {opacity:1}
+  to  {opacity: 0}
+
+
+@-moz-keyframes last 
+  from {right:0}
+  to  {right: 121px}
+
+@-moz-keyframes blog 
+  from  {opacity: 0}
+  to  {opacity: 1}
+
+@-webkit-keyframes center 
+  from {opacity:1}
+  to  {opacity: 0}
+
+
+@-webkit-keyframes last 
+  from {right:0}
+  to  {right: 121px}
+
+@-webkit-keyframes blog 
+  from  {opacity: 0}
+  to  {opacity: 1}

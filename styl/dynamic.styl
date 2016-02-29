@@ -1,0 +1,60 @@
+{prefix}-wrapper.show-content, .single-page
+  {prefix}-content-wrapper
+    transform: translateX(-130%)
+    background: rgba(247, 247, 247, .8)
+
+  {prefix}-main
+    &-wrapper
+      transform: translateX(-40%)
+
+    &-backdrop-wrapper
+      transform: translateX(-40%)
+
+    &-backdrop-top
+      transform: translateX(40%)
+
+  {prefix}-header
+    & .is-logo
+      opacity: 0
+      visibility: hidden
+
+      &-small
+        opacity: 1
+        visibility: visible
+
+  {prefix}-slide-caption
+    transform: translateX(-20%)
+    opacity: 0
+
+  {prefix}-header-options.dark
+    color: colors.darkText
+
+    {prefix}-header-options-login
+      @extend .icon-exit-dark-sm
+
+    {prefix}-header-options-lang:after
+      border-bottom-color: colors.darkText
+
+  & > {prefix}-menu-wrapper
+    top: 16%
+    left: 0
+
+    a
+      color: colors.darkText
+      &:hover
+        color: colors.darkTextHover
+
+{prefix}-wrapper.show-overlay
+  {prefix}-overlay-wrapper
+    transform: translateX(-130%)
+
+  {prefix}-backbutton
+    transform: translateX(0)
+
+{prefix}-wrapper.show-menu
+  {prefix}-topmenu-wrapper
+    transform: translateY(0)
+
+{prefix}-wrapper.show-rollout
+  {prefix}-rollout-wrapper
+    transform: translateX(0)
