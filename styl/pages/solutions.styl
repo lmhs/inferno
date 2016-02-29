@@ -1,0 +1,701 @@
+.clear
+  clear: both
+
+.top-slider
+  width: 100%
+  height: 408px
+  margin: 60px 0 0 -68px
+  position: relative
+  
+  & {prefix}-slider-controls
+    font-size: 18px
+    color: colors.darkText
+    left: 67px
+    bottom: 46px
+    z-index: 2
+    margin-left: 4px
+
+    & span
+      margin-right: 2px
+  
+.top-slider .slide
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
+  
+  & .slide-bg
+    width: 1483px
+    position: absolute
+    left: 0
+    top: 0
+    overflow: hidden
+    z-index: 1
+  
+    &:before, &:after
+      border-style: solid
+      content: ""
+      height: 0
+      position: absolute
+      top: 0
+      width: 0
+  
+    &:before
+      border-color: colors.background transparent transparent
+      border-width: 408px 206px 0 0
+      left: -1px
+	
+    &:after
+      border-color: transparent transparent colors.background
+      border-width: 0 0 408px 206px
+      right: -1px
+	  
+	& .img
+      width: 1483px
+      height: 400px
+      padding-bottom: 8px
+      box-shadow: 0 -8px 0 colors.accent inset
+	  
+    & .color-corner
+      height: 100%
+      width: 1000px
+      position: absolute
+      left: 1007px
+      top: 0
+      background-color: colors.accent
+      opacity: 0.7
+      transform: skew(-27deg, 0);
+	  
+  & .slide-data
+    display: inline-block
+    position: absolute
+    left: 66px
+    top: 121px
+    z-index: 2
+	
+    & h2
+      boldFont()
+      font-size: 40px
+      margin: 0
+	  
+    & h3
+      boldFont()
+      font-size: 30px
+      margin: 1px 0 16px 0
+	  
+    & p
+      mediumFont()
+      font-size: 16px
+      margin: 0 0 17px
+
+
+.blocks-tabs
+  padding: 0 10px 0 0
+  margin: 13px 10px 19px
+  overflow: hidden
+  float: left
+  
+  & li
+    list-style: none
+    transform: skew(-27deg, 0);
+    background: #e1e1e1
+    float: left
+    margin-left: 2px
+    overflow: hidden
+    transition: all .5s ease
+    &:hover
+      transition: all .5s ease
+      background: #b7b6b6
+
+    & a
+      display: inline-block
+      padding: 9px 18px
+      bookFont()
+      font-size: 16px
+      color: colors.darkText
+      transform: skew(27deg, 0);
+
+      &:hover
+        text-decoration: none
+
+    &.active
+      background: colors.accent
+
+    &:first-child
+      width: 70px
+      text-align: right
+      margin-left: -17px
+
+.search-box
+  height: 39px
+  overflow: hidden
+  border-bottom: 1px solid #000
+  position: relative
+  margin-top: 13px
+  float: right
+  margin-right: 10px
+
+  &:before
+    border-style: solid
+    content: ""
+    height: 0
+    position: absolute
+    top: 0
+    width: 0
+    border-color: colors.background transparent transparent
+    border-width: 40px 20px 0 0
+    left: -1px
+  
+  & input[type="text"]
+    width: 266px
+    bookFont()
+    font-size: 16px
+    color: #231f20
+    background: #fff
+    border: none
+    padding: 10px 18px 9px 36px
+	
+  & input[type="submit"]
+    display: none
+	
+.cms-block
+  color: colors.darkText
+  
+  .cms-element
+    margin: 10px
+    position: relative
+    overflow: hidden
+  
+    span
+      boldFont()
+      font-size: 30px
+      display: block
+      margin: 18px 0 0 25px
+      color: colors.darkText
+
+    p
+      mediumFont()
+      font-size: 16px
+      display: block
+      margin: 0 0 0 25px
+      
+    &:hover .link
+      opacity: 1
+  
+  .horizontal-1
+    width: 300px
+    height: 200px
+    float: left
+	
+  .horizontal-2
+    width: 620px
+    height: 200px
+    float: left
+	
+  .vertical
+    width: 300px
+    height: 420px
+    float: right
+	
+    .text
+      margin-top: 21px
+      
+  .text-right
+    text-align: right
+    position: absolute
+    right: 17px
+    bottom: 38px
+    z-index: 2
+    
+    span
+      mediumFont()
+      font-size: 16px
+      margin: 0 0 -3px
+      
+    p
+      boldFont()
+      font-size: 18px
+      margin: 0
+      
+  .color-corner
+    width: 300px
+    height: 200px
+    background: colors.accent
+    opacity: 1
+    transform: skew(-27deg, 0deg)
+    text-align: right
+    position: absolute
+    left: 464px
+    top: 0
+
+  .drupal
+    background: url("../img/cms/drupal.jpg") no-repeat 0 0
+    
+  .wordpress
+    background: url("../img/cms/wordpress.jpg") no-repeat 0 0
+    
+  .buddy-press
+    background: url("../img/cms/buddy-press.jpg") no-repeat 0 0
+    
+  .cms-pack
+    background: #ffa43c
+    
+  .forum
+    background: url("../img/cms/forum.jpg") no-repeat 0 0
+    
+  .cms-camomile
+    background: url("../img/cms/camomile.jpg") no-repeat 0 0
+    
+  .email-server
+    background: url("../img/cms/email-server.jpg") no-repeat 0 0
+    
+  .e-shop
+    background: url("../img/cms/e-shop.jpg") no-repeat 0 0
+
+& .btn-add
+      boldFont()
+      text-transform: uppercase
+      position: relative
+
+.rating-box
+  list-style: none
+  margin: 0
+  padding: 0
+  z-index: 5
+  
+  li
+    width: 13px
+    height: 13px
+    float: left
+    margin-left: 2px
+    cursor: pointer
+    background: url("../img/sprites/vote-stars-sprite.png") no-repeat 0 -26px
+    
+    &:first-child
+      margin: 0
+    
+  &.white-star .active
+    background-position: 0 0
+    
+  &.black .active
+    background-position: 0 -13px
+    
+  &.yellow .active
+    background-position: 0 -39px
+    
+.cms-block .rating-box
+  position: absolute
+  right: 17px
+  bottom: 18px
+    
+.show-more-btn
+  width: 98%
+  display: block
+  margin: 0 auto
+  background: #e1e1e1
+  baseFont()
+  text-align: center
+  text-transform: none
+  margin-top: 11px
+  padding: 9px 0
+  margin-left: 10px
+  color: black
+  transition: all .5s ease
+  &:visited
+    color: black
+  &:hover
+    transition: all .5s ease
+    background: #b7b6b6
+    text-decoration: none
+
+.solutions-elements
+  width: 940px
+
+  .top-box
+    position: relative
+    
+    .buy-box
+      display: inline-block
+      position: absolute
+      right: 10px
+      bottom: 7px
+      
+      .text
+        boldFont()
+        font-size: 18px
+        margin-right: 19px
+        position: relative
+        top: 4px
+        float: left
+        
+        p
+          mediumFont()
+          font-size: 12px
+          color: colors.desc
+          text-transform: uppercase
+          margin: 3px 0 0
+          
+      .link
+        float: left
+        
+    .close-btn
+      display: inline-block
+      color: colors.darkText
+      lightFont()
+      font-size: 55px
+      transform: rotate(45deg)
+      cursor: pointer
+      position: absolute
+      right: -108px
+      top: -75px
+
+  .element-title
+    boldFont()
+    font-size: 30px
+    margin-bottom: 0
+    
+  .breadcrumbs
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+    position: relative
+    left: 13px
+    top: -3px
+    
+    li
+      display: inline-block
+      mediumFont()
+      font-size: 16px
+      margin-left: 6px
+      
+      &:before
+        content: '/'
+        color: colors.darkText
+        margin-right: 8px
+        
+      &:first-child
+        margin: 0
+      a:visited
+        color: black
+      a:hover
+        text-decoration: none
+.skew-tabs
+  overflow: hidden
+  margin: 13px 0 20px
+  
+  ul
+    width: 200%
+    list-style: none
+    margin: 0
+    padding: 0
+    position: relative
+    left: -13px
+  
+    li
+      width: 146px
+      text-align: center
+      background: #e1e1e1
+      transform: skew(-27deg, 0deg)
+      overflow: hidden
+      margin-left: 2px
+      float: left
+      transition: all .5s ease
+      &:hover
+        transition: all .5s ease
+        background: #b7b6b6
+      
+      a
+        display: block
+        bookFont()
+        font-size: 16px
+        color: colors.darkText
+        padding: 9px
+        transform: skew(27deg, 0deg)
+        
+        &:hover
+          text-decoration: none
+        
+        span
+          color: colors.desc
+        
+      &:last-child
+        width: 221px
+        
+      &.active
+        background: colors.accent
+        
+.solutions-el
+  max-height: 600px
+  overflow-y: auto
+  display: none
+  
+  &.active
+    display: block
+    
+  &.solutions6
+    margin: 37px 0 0 -3px
+    
+    .cms-element
+      margin: 3px
+      
+    .drupal
+      background: url("../img/pop-up-banners/drupal.jpg") no-repeat 0 0
+      
+    .joomla
+      background: url("../img/pop-up-banners/joomla.jpg") no-repeat 0 0
+      
+    .open-slaed
+      background: url("../img/pop-up-banners/open-slaed.jpg") no-repeat 0 0
+      
+    .bitrix
+      background: url("../img/pop-up-banners/bitrix.jpg") no-repeat 0 0
+      
+    .typo3
+      background: url("../img/pop-up-banners/typo-3.jpg") no-repeat 0 0
+      
+    .mitrix
+      background: url("../img/pop-up-banners/mitrix.jpg") no-repeat 0 0
+  
+  h3
+    mediumFont()
+    font-size: 16px
+    margin: 22px 0 22px
+    
+    &:first-child
+      margin-top: 0
+    
+  p
+    baseFont()
+    color #333333
+    margin: 22px 0
+    
+  ol
+    padding: 0 0 0 30px
+    margin: 22px 0
+    
+    li
+      margin-top: 10px
+      
+      &:first-child
+        margin-top: 0
+
+  .el-block-slider
+    width: 100%
+    overflow: hidden
+    
+    .slides-box
+      width: 9999px
+    
+    .slide
+      width: 580px
+      height: 369px
+      padding: 20px 21px 0
+      background: #eeeeee
+      overflow: hidden
+      float: left
+      
+      img
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.41)
+        
+    .page-slider-controls
+      color: colors.darkElement
+      position: relative
+      left: 0
+      top: 0
+      margin: 15px 0 0 3px
+      
+      span
+        margin: 0
+        
+  .el-left-block
+    width: 622px
+    float: left
+        
+  .el-right-block
+    width: 300px
+    float: right
+    
+  .col
+    margin-right: 1.5%
+    
+  .review-item
+    padding: 26px 18px
+    
+  .review-item-lg
+    height: 187px
+    
+  .review-item-md
+    height: 58px
+    
+  .review-text
+    margin-bottom: 8px
+    
+  .send-post
+    border: 1px solid colors.accent!important
+    height: 186px
+    margin-left: 1px
+    &:before, &:after
+      border-style: none!important
+      
+    & > span
+      color: colors.desc
+      text-transform: uppercase
+      padding-left: 10px
+      
+    .info
+      display: inline-block
+      color: colors.desc
+      position: absolute
+      top: 25px
+      right: 22px
+      &:hover
+        text-decoration: none
+        color: #336699
+    textarea
+      width: 93%
+      resize: none
+      border-top: none
+      border-right: none
+      border-left: none
+      border-bottom: 1px solid colors.subtleBorder
+      padding: 10px
+      margin-top: 10px
+      
+    .rating-box
+      margin-top: 16px
+      
+    .btn
+      boldFont()
+      position: absolute
+      right: 17px
+      bottom: -19px
+      font-size: 16px
+  {prefix}-questions
+    margin-top: 0
+    
+    {prefix}-question-body
+      width: 100%
+      
+    ul
+      margin: 0
+
+{prefix}-solutions
+  .bg-corner
+    height: 400px
+    width: 1000px
+    position: absolute
+    left: 100%
+    bottom: 0
+    background-color: colors.yellow-triangle
+    opacity: 0.6
+    transform: skew(-27deg, 0)
+    -webkit-animation: solutions- 0.5s forwards
+    -webkit-animation-delay: 0.5s
+    animation: solutions-bg-corner 0.5s forwards
+    animation-delay: 1s
+    
+@-webkit-keyframes solutions-bg-corner {
+    from { left: 100%; } to { left: 1102px; }
+}
+
+@keyframes solutions-bg-corner {
+    from { left: 100%; } to { left: 1102px; }
+}
+
+{prefix}-solutions
+  &-solid
+    width: 960px
+    opacity: .98
+    margin: 0px 39px
+
+{prefix}-solutions
+  position: relative
+  height: 400px
+  width: 1470px
+  overflow: hidden
+  background: url(imgPath + 'solutions_slide.png')
+  background-position: top center
+  background-size: cover
+  box-shadow: inset 0 -8px 0 colors.accent
+  top: 14px
+
+  &:before,
+  &:after
+    position: absolute
+    content: ''
+    top: 0
+    width: 0
+    height: 0
+    border-style: solid
+
+  &:before
+    left: -1px
+    border-color: colors.background transparent transparent transparent
+    border-width: 536px 262px 0 0
+
+  &:after
+    right: -1px
+    border-color: transparent transparent colors.background transparent
+    border-width: 0 0 536px 262px
+    
+.custom-overlay-shape
+  background: rgba(35, 31, 32, 0.8)
+    
+  &:before
+    content: ''
+    display: block
+    width: 200%
+    height: 100%
+    background: colors.background
+    transform: skew(-27deg)
+    border-left: 2px solid colors.accent
+    position: absolute
+    left: 47%
+    top: 0
+
+.page-help.solutions
+  width: 964px
+  margin-left: 10px
+  position: relative
+  background-size: 100% 441px
+
+.page-reviews-wrapper.solutions
+  width: 940px
+  margin-left: 10px
+
+.col-2.sm-map
+  width: 550px
+
+.details
+  height: 40px
+  width: 120px
+  display: inline
+  padding: 12px 20px
+  background-color: #fff
+  margin-right: 2px
+  text-transform: uppercase
+  boldFont()
+  color: colors.darkText
+  &:visited
+    color: colors.darkText
+  &:hover
+    text-decoration: none
+
+.container-content.solutions 
+  margin: 0px 132px
+
+.page-reviews-wrapper .page-titlebar h3 
+  width: 94px
+  margin: 0
+  display: inline-block
+
+.info
+  color: colors.desc
+  &:visited
+    color: colors.desc
+  &:hover
+    color: colors.info-hover
+    text-decoration: none
+

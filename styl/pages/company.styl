@@ -1,0 +1,221 @@
+{prefix}-company
+  &-header-title
+    width: 600px
+    margin-top: 170px
+    h1
+      margin: 0 0 5px 0
+    h2
+      margin: 0 0 30px 0
+  &-solid
+    margin-top: 190px
+    width: 940px
+    opacity: .98
+    margin-left: -80px
+  .bg-corner
+    height: 376px
+    width: 1000px
+    position: absolute
+    left: 95%
+    bottom: 0
+    background-color: colors.yellow-triangle
+    opacity: 0.6
+    transform: skew(-30deg, 0)
+    -webkit-animation: bg-corner 0.5s forwards
+    -webkit-animation-delay: 0.5s
+    animation: bg-corner 0.5s forwards
+    animation-delay: 1s
+
+
+{prefix}-company-solid .title
+  boldFont()
+  font-size: 18px
+  margin: 0 0 30px 1px
+  padding-top: 18px
+
+.support-and-attitude p
+  font-size: 14px
+  width: 440px
+  margin: 30px 0 0 0
+
+.team
+  background: url(imgPath + 'team.png') no-repeat
+  background-position-y: 50px
+  width: 940px
+  height: 426px
+  margin: 0 0 40px 0px
+
+.business
+  .title
+    margin: 0 0 30px 0px
+  .business-item
+    margin: 0 40px 30px 0
+    position: relative
+    p
+      margin-top: 0
+.support-and-attitude
+  .support, .attitude
+    .citate
+      position: relative
+      font-size: 18px
+      font-weight: bold
+      font-style: italic
+      color: #484848
+      &:before
+        content: '"'
+        position: absolute
+        left: -43px
+        bottom: 5px
+        mediumItalicFont()
+        font-size: 60px
+.attitudepadding 
+  p
+    margin: 0 0 30px 0
+.instagram
+  position: relative
+  .instagram-title
+    margin: 0 0 20px 0px
+  &:before
+    content: ''
+    position: absolute
+    top: 44px
+    left: -40px
+    sprite('small', 1, 1, 20)
+  ul
+    list-style: none
+    width: 960px
+    height: 400px
+    padding: 0
+    margin: 0 0 0 0
+    clearfix()
+  ul li
+    float left
+    img
+      display block
+      width: 192px
+  .icon-instagram-sm
+    float left
+    margin: 50px 10px 0 0
+  a
+    display: block
+    margin: 0 0 60px 0
+    color: colors.link
+
+.news-and-partners
+  clear: both
+  .news
+    clearfix()
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    width: 410px
+    color: colors.link
+    hr
+      margin: 15px 0 13px 0
+
+.partners-banner
+  .banner-title
+    font-size: 30px
+    mediumFont()
+    width: 160px
+    height: 80px
+  .partners-desc
+    width: 270px
+    height: 90px
+
+// Icons 
+.business .icon-side:before
+  content: ''
+  position: absolute
+  left: -33px
+  @extend .icon-logo-yellow-sm
+
+{prefix}-company
+  position: relative
+  height: 396px
+  width: 1470px
+  margin-left: 3%
+  overflow: hidden
+  background: url(imgPath + 'company_banner.png')
+  background-position: top center
+  background-size: cover
+  box-shadow: inset 0 -8px 0 colors.accent
+  bottom: 5px
+
+  &:before,
+  &:after
+    position: absolute
+    content: ''
+    top: 0
+    width: 0
+    height: 0
+    border-style: solid
+
+  &:before
+    left: -1px
+    border-color: colors.background transparent transparent transparent
+    border-width: 421px 200px 0px 0px
+
+  &:after
+    right: -1px
+    border-color: transparent transparent colors.background transparent
+    border-width: 0px 0px 458px 250px
+
+
+.news-and-partners
+  position: relative
+  clearfix()
+  .news
+    width: 460px
+    float: left
+    &-last
+      margin-bottom: 60px
+  .partners-banner
+    width: 460px
+    float: left
+  .partners-banner-bg
+    background: url(imgPath + 'company-partner-banner.png') no-repeat
+    background-position: 100% 104%
+    width: 460px
+    height: 300px
+    position: absolute
+    right: -11%
+    top: -37px
+  .btn
+    position: absolute
+    left: 68%
+    top: 90px
+    boldFont()
+    background-position: -90px -40px
+    padding: 12px 50px 10px 15px
+  a
+    color: colors.link 
+
+
+.company-contacts
+  width: 960px
+  position: relative
+  background-image: url('../img/company-footer.png')
+  background-position: center -20px
+  background-size: 100% 260px
+  background-repeat: no-repeat
+  height: 240px
+  margin: 0 139px
+  bottom: 40px
+  .contacts-data
+    float: left
+  .title
+    boldFont()
+    font-size: 18px
+  .name
+    width: 220px
+  .desc
+    width: 300px
+  .page-contacts-options
+    width: 150px
+    float: left
+    margin: 0 0 0 60px
+
+.bg-wrapper
+  background-color: rgba(247, 247, 247, 0.97)
+  position: absolute

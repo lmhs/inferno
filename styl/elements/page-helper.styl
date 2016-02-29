@@ -1,0 +1,181 @@
+{prefix}-helper
+  position: absolute
+  bottom: -930px
+  left: 0
+  width: 100%
+  height: 93%
+  background: rgba(35, 31, 32, 0.95)
+  z-index: depth.pageHelper
+  transition: bottom (duration.transition * .6) ease
+
+  &.opened
+    bottom: 0
+
+  &-close
+    position: absolute
+    right: 24px
+    top: 24px
+    cursor: pointer
+    background-image: url(imgPath + 'close_btn.png')
+    width: 14px
+    height: 14px
+
+    &:hover
+      opacity: .8
+
+  &-content
+    margin: 35px
+
+  &-title
+    boldFont()
+    font-size: 20px
+    color: colors.lightText
+    margin: 0 0 34px
+    
+  .select-plan
+    font-size: 16px
+      
+    span
+      mediumFont()
+      color: colors.desc
+      
+    .select, .helper-search-box input[type="text"]
+      display: inline-block
+      boldFont()
+      color: colors.lightText
+      border: 1px solid #484244
+      padding: 6px 14px 7px 12px
+      margin: 0 6px
+      position: relative
+      background: rgba(35, 31, 32, .3)
+      
+    .select
+      cursor: pointer
+      
+      &:after
+        content: ''
+        width: 0
+        height: 0
+        border-style: solid
+        border-color: transparent transparent colors.yellow-triangle
+        border-width: 0 0 6px 6px
+        position: absolute
+        right: 6px
+        bottom: 6px
+        
+    .helper-search-box
+      position: relative
+      display: inline-block
+      float: right
+      
+      input[type="text"]
+        width: 253px
+        color: white
+        padding-right: 43px
+    
+      .submit
+        width: 42px
+        height: 33px
+        border: none
+        padding: 0
+        position: absolute
+        right: 7px
+        top: 1px
+        
+        &:after
+          content: ''
+          width: 20px
+          height: 20px
+          @extend .icon-search-sm
+          position: absolute
+          left: 12px
+          top: 7px
+          
+  .buy-plans
+    margin-top: 38px
+  
+    .single-plan
+      width: 245px
+      height: 411px
+      padding: 19px 25px 10px 20px
+      background: #fff
+      position: relative
+      margin-left: 10px
+      float: left
+      
+      &:first-child
+        margin-left: 0
+      
+      .marker
+        @extend .icon-logo-black-sm
+        position: absolute
+        right: 22px
+        top: 21px
+      
+      .title
+        boldFont()
+        font-size: 20px
+        
+      hr
+        margin: 15px 0 13px
+        
+      table
+        width: 100%
+        text-align: left
+        
+        th, td
+          padding-bottom: 11px
+        
+        th
+          width: 62px
+          lightFont()
+          font-size: 12px
+          color: colors.desc
+          pagging-left: 1px
+          padding-right: 12px
+          text-transform: uppercase
+          
+        td
+          boldFont()()
+          font-size: 14px
+          
+          span
+            color: #d3d3d3
+            
+      .btn
+        display: inline-block
+        margin-top: 33px
+        font-size: 14px
+        
+        &.grey-btn
+          background: #fff
+          color: colors.desc
+          border: 1px solid colors.desc
+          padding: 9px 20px 9px 9px
+          display: inline-block
+          position: relative
+          &:after
+            content: ''
+            position: absolute
+            top: -1px
+            right: -7px
+            background: url('../img/triangle-btn.png') no-repeat
+            width: 10px
+            height: 51px
+        &.yellow-btn
+          color: colors.darkText
+          padding: 10px 30px 10px 10px
+          display: none
+        
+      &:hover
+      
+        .marker
+          @extend .icon-logo-yellow-sm
+        
+        .btn
+          
+          &.yellow-btn
+            display: inline-block
+            
+          &.grey-btn
+            display: none

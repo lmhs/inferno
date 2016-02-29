@@ -1,0 +1,67 @@
+{prefix}-topmenu
+  bookFont()
+  position: absolute
+  z-index: 500
+  font-size: fontSize.menu
+  background: colors.background
+  line-height: 60px
+  height: 53px
+  margin-left: -10px
+
+  &-wrapper
+    position: absolute
+    right: 0
+    top: 0
+    width: 90%
+    height: 60px
+    transform: translateY(-100%)
+    transition: transform duration.transition ease
+    z-index: depth.pageTopMenu
+
+  &:before
+  &:after
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    border-style: solid
+
+  &:before
+    border-color: transparent colors.background transparent transparent
+    border-width: 0 30px 50px 0
+    left: -30px
+
+  &:after
+    border-color: colors.background transparent transparent transparent
+    border-width: 54px 30px 0 0
+    right: -30px
+
+  a
+    position: relative
+    display: block
+    float: left
+    color: colors.darkText
+    line-height: 50px
+    border-top: 4px solid transparent
+    margin-right: 40px
+
+    &:hover
+      color: colors.darkTextHover
+      border-top: 4px solid colors.subtleText + #111
+
+    &.active
+    &.active:hover
+      color: colors.darkText
+      border-top: 4px solid colors.accent
+
+    &:last-of-type
+      margin-right: 0
+      &:after
+        content: ''
+
+    &:after
+      content: '/'
+      position: absolute
+      top: 0
+      right: -24px
+      color: colors.subtleText

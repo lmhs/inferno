@@ -1,0 +1,77 @@
+// ----------------------------------
+// @Sprite definitions
+// ----------------------------------
+
+path = '../img/sprites/'
+
+sprite(name, col, row, w, h = w)
+  width: (w = unit(w, 'px'))
+  height: (h = unit(h, 'px'))
+  background: url(path + name + '-sprite.png') (col * w * -1) (row * h * -1) no-repeat
+
+icons = {
+  sm: {
+    list: (exit plus minus skype email comment basket eclipse logo-black logo-yellow search instagram facebook twitter close-light close-dark exit-dark arrow-left)
+    cols: 10
+  }
+  md: {
+    list: (admin monitor equipment resources backup schedule support service paymethod discount copy order security recovery access communication partners protection protectionpro fake cifer actions pdf cms configuration)
+  }
+  lg: {
+    list: (admin monitor equipment resources backup schedule support service paymethod discount copy order security recovery access communication partners protection protectionpro fake cifer actions)
+    cols: 5
+  }
+  pm: {
+    list: (paypal paxum webmoney moneymail liqpay sberbank alfa-bank)
+    cols: 5
+  }
+}
+
+sprite-paymethods-variable(w, h, dx, dy)
+  width: (w = unit(w, 'px'))
+  height: (h = unit(h, 'px'))
+  background: url(path + 'paymethods-sprite.png') (dx + w)*-1 (dy + h)*-1 no-repeat
+
+// ----------------------------------
+// @Sprite classes
+// ----------------------------------
+
+// Small
+
+for icon, n in icons.sm.list
+  .icon-{icon}-sm
+    sprite('small', n % icons.sm.cols, floor(n / icons.sm.cols), 20)
+
+// Medium
+
+for icon, n in icons.md.list
+  .icon-{icon}-md
+    sprite('medium', n, 0, 40)
+    &:hover, &.hover
+      sprite('medium', n, 1, 40)
+    &.active, &.dark
+      sprite('medium', n, 2, 40)
+
+// Large
+
+for icon,n in icons.lg.list
+  .icon-{icon}-lg
+    sprite('large', n % icons.lg.cols, floor(n / icons.lg.cols), 140)
+
+// Paymethods
+
+for icon,n in icons.pm.list
+  .icon-{icon}
+    sprite('paymethods', n % icons.pm.cols, floor(n / icons.pm.cols), 100, 50)
+
+.icon-intercash
+  sprite-paymethods-variable(120, 30, 80, 35)
+
+.icon-yandex-money
+  sprite-paymethods-variable(56, 30, 271, 35)
+
+.icon-rbk
+  sprite-paymethods-variable(55, 30, 329, 35)
+
+.icon-ukash
+  sprite-paymethods-variable(60, 30, 382, 35)

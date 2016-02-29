@@ -1,0 +1,36 @@
+{prefix}-backbutton
+  position: relative
+  width: 30px
+  height: 40px
+  position: fixed
+  left: 0
+  top: 7%
+  background: colors.darkText
+  z-index: depth.pageBackbutton
+  transform: translateX(-175%)
+  transition: transform duration.transition ease
+  cursor: pointer
+
+  &:hover
+    background: colors.darkText + #080808
+    &:after
+      border-top-color: colors.darkText + #080808
+
+  &:before
+  &:after
+    content: ''
+    position: absolute
+
+  &:before
+    @extend .icon-arrow-left-sm
+    right: 0
+    top: 50%
+    margin-top: -10px
+
+  &:after
+    width: 0
+    height: 0
+    border-style: solid
+    border-color: colors.darkText transparent transparent transparent
+    border-width: 40px 20px 0 0
+    right: -20px

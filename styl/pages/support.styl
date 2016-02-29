@@ -1,0 +1,410 @@
+.page-support
+  &-title
+    boldFont()
+    margin: 110px 0 0 0
+    font-size: 40px
+  &-subtitle
+    font-size: 30px
+  &-search
+    margin: 35px 0 0 0
+  input
+    width: 600px
+    height: 40px
+    border: none
+    border-bottom: 1px solid black
+    text-indent: 20px
+    font-size: 16px
+    bookFont()
+
+.page-support
+  &-banner-top
+    width: 1220px
+    height: 200px
+    margin: 20px 0 0 0
+    border: 1px dashed #e1e1e1
+    background: rgba(238, 238, 238, 0.5)
+    position: relative
+    .banner-top
+      &-text
+        width: 515px
+        padding: 26px 0 0 23px
+      &-title
+        boldFont()
+        font-size: 18px
+        color: #333333
+
+.page-support-banner-top .icon-close-dark-sm
+  position: absolute
+  right: 25px
+  top: 25px
+
+.article-nav
+  list-style: none
+  padding: 26px 0 0 0
+  margin: 0 0 0 120px
+  li
+    margin: 0 0 18px 0
+
+.page-questions-support
+  &-title
+    boldFont()
+    font-size: 18px
+    display: inline-block
+    margin: 0 0 45px 0
+  .page-question
+    margin: 0 0 24px 0
+    &.expanded:before
+      content: ''
+      width: 2px
+      height: 100%
+      display: block
+      background: #cccccc
+      position: absolute
+      left: 9px
+      top: 27px
+    &-body
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        z-index: -1
+        top: -20px
+        left: -23px
+        bottom: 2px
+        border: 2px solid #ccc
+        height: 113%
+        transition: all .5s
+    span
+      width: 550px
+    a
+      margin: 0
+
+.top-block
+  margin-bottom: 25px
+  position: relative
+  overflow: hidden
+  
+  .container-content
+    background: url('../img/support-page-bg.png') no-repeat 140% 0;
+    overflow: hidden
+    z-index: 2
+    
+  .infinity-right-bg
+    width: 100%
+    height: 540px
+    background: #fffcf3
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+    @media (min-width: 2000px) and (max-width: 2100px)
+      width: 37%
+    @media (min-width: 2101px)
+      width: 40%
+    
+  hr
+    margin-bottom: 0!important
+
+.contacts-sm
+  width: 1087px
+  margin: 0 auto
+  clear: both
+  color: #474747
+  background: url('../img/contacts-map.png') no-repeat;
+  background-size: 100%
+  bottom: 0
+  background-position: 0 27px
+  height: 260px
+  &-title
+    @extend .page-questions-support-title
+  &-work-time
+    width: 215px
+    margin: 0 0 25px 0
+  &-text
+    width: 280px
+    margin: 0 0 0 0
+  &-options
+    margin: 80px 0 0 0
+    clearfix()
+    div
+      float: left
+      margin: 0 10px 0 0
+    li
+      display: block
+      margin: 10px 0 0 0
+  .map-pointer
+    width: 26px
+    height: 45px
+    background: url('../img/map-pointer-bg.png') no-repeat;
+    position: absolute
+    right: 162px
+    top: 87px
+    
+.single-page
+  background: colors.background
+
+  .page-header
+    min-width: 1024px
+    position: relative
+    margin: 0 auto
+    
+  .is-logo-small
+    margin-left: 30px
+  
+  .container-content
+    position: relative
+    margin: 0 auto
+
+  h1
+    margin: 0
+    padding: 110px 0 0
+      
+  .support-box
+    color: colors.darkText
+    mediumFont()
+    display: inline-block
+    position: absolute
+    right: 40px
+    top: 90px
+    padding-top: 25px
+    
+    span
+      font-size: 30px
+    
+    p
+      boldFont()
+      margin: -4px 0 20px
+      font-size: 16px
+      text-transform: uppercase
+    
+    a
+      color: colors.link
+      mediumFont()
+      font-size: 16px
+      
+  .col-md-1
+  
+    {prefix}-question span
+      width: 90%
+      
+  {prefix}-support-banner-top
+    width: auto
+    
+  .btn
+    border: none
+    
+    &.search
+      boldFont()
+      text-transform: uppercase
+      font-size: 16px
+      line-height: 19px
+      position: relative
+      left: 7px
+      top: 1px
+      background-position: -159px -40px
+
+  .hr-large-margin
+    margin: 39px 0 30px
+    
+  .breadcrumbs
+    margin: 0 0 29px
+    padding: 0
+    
+    li
+      list-style: none
+      display: inline
+      
+      a
+        font-size: 13px
+        
+        &:hover
+          text-decoration: underline
+          
+      &:before
+        content: '-'
+        color: colors.darkText
+        margin-right: 3px
+        
+      &:first-child:before
+        content: ''
+        margin: 0
+        
+  {prefix}-questions-support-title.big
+    font-size: 24px
+    
+  .content-left-box
+    width: 69%
+    margin-right: 8%
+    
+  .content-right-box
+    width: 23%
+    
+  .post-list
+    margin: 0
+    padding: 0
+    
+    li
+      list-style: none
+      font-size: 16px
+      margin-bottom: 8px
+      
+      &:before
+        content: '-'
+        color: colors.darkText
+        margin-right: 5px
+        
+      a
+        mediumFont()
+        
+        span
+          baseFont()
+          font-size: 15px
+          color: colors.desc
+          padding-left: 4px
+          
+  .formatted-text
+    clearfix()
+    h2
+      boldFont()
+      font-size: 24px
+      color: #333
+      margin: 0 0 22px
+      
+    h3
+      boldFont()
+      font-size: 18px
+      color: colors.darkText
+      margin: 40px 0 22px
+      
+    p
+      baseFont()
+      color: #474747
+      margin: 22px 0
+      
+    .small-desc
+      boldFont()
+      color: colors.desc
+      
+    .align-left
+      float: left
+      margin: 0 22px 22px 0
+      
+    .align-right
+      float: right
+      margin: 0 0 22px 22px
+      
+    .align-center
+      margin: 0
+      max-width: 100%
+      
+    ol
+      display: inline-block
+      padding-left: 20px
+      margin: 20px 0
+      list-style-type: none
+      counter-reset: item
+      
+      li
+        margin-top: 10px
+        counter-increment: item
+        position: relative
+        
+        &:first-child
+          margin: 0
+          
+        &:before
+          content: counter(item) "."
+          display: block
+          font-weight: bold
+          position: absolute
+          left: -20px
+          
+    .important
+      margin: 40px 0
+      padding: 0 10px 0 20px
+      border: 2px solid colors.accent
+      padding: 20px
+
+      .block-title
+        display: inline-block
+        width: 100%
+        font-weight: bold
+        
+    .img-detail
+      mediumItalicFont()
+      
+    table
+      width: 100%
+      color: #474747
+      margin: 30px 0
+      
+      thead
+        border-bottom: 2px solid colors.accent
+        boldFont()
+        
+      tbody
+        baseFont()
+        
+        tr
+          border-top: 1px solid colors.divider-horizontal
+          
+          &:first-child
+            border: none
+          
+          &:hover
+            background: #ededed
+            
+            & td:first-child
+              color: colors.link
+        
+      td
+        padding: 11px 23px 11px
+        
+      .circle
+        width: 7px
+        height: 7px
+        display: inline-block
+        border-radius: 4px
+        position: relative
+        top: -1px
+        
+        &.blue
+          background: #336699
+          
+        &.green
+          background: #56991b
+          
+        &.red
+          background: #ff1d42
+          
+        &.gray
+          background: #8b7b7f
+          
+        &.black
+          background: #474747
+          
+        &.not-active
+          background: #cccccc
+          
+  .ask-a-question
+    clear: both
+    margin-bottom: 59px
+    
+    hr
+      margin-bottom: 21px
+    
+    p
+      boldFont()
+      color: #333333
+      font-size: 18px
+      
+    .link
+      padding: 11px 14px 10px 14px
+      background: url(../img/support-btn.jpg)
+      &:hover
+        background-position: 0 -40px
+
+    .question-link
+      mediumFont()
+      font-size: 16px
+      margin-left: 21px
