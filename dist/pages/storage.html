@@ -396,15 +396,20 @@
 
   function setValue () {
     var value = this.dataset.num;
-    slider.noUiSlider.set(value);
+    slider.noUiSlider.set( value );
 
-    Array.prototype.forEach.call(pips, function(pip, i){
+    setCurrentPip(this);
+
+    return value;
+  }
+
+  // set current pip active
+  function setCurrentPip (element) {
+    Array.prototype.forEach.call(pips, function ( pip, i ){
       pip.classList.remove('slider-pip--is-active');
     });
 
-    this.classList.add('slider-pip--is-active');
-
-    return value;
+    element.classList.add('slider-pip--is-active');
   }
 
   Array.prototype.forEach.call(pips, function(pip, i){
