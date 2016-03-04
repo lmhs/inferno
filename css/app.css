@@ -1258,6 +1258,112 @@ input[type='number']::-webkit-inner-spin-button {
 .knowledge__label {
   padding-left: 6px;
 }
+.dd-toggle-wrap {
+  box-sizing: border-box;
+  position: relative;
+  height: 42px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  font-family: 'Whitney-Book', 'PT Sans', Arial, sans-serif;
+}
+.dd-toggle-wrap.dd--is-opened .dd-toggle {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.dd-toggle-wrap.dd--is-opened .dd-toggle:after {
+  border-width: 0 8px 8px 0;
+  border-color: transparent #ccc transparent transparent;
+  top: 6px;
+  bottom: auto;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.dd-toggle {
+  display: inline-block;
+  width: 100%;
+  height: 42px;
+  padding: 0 34px 0 15px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 700;
+  vertical-align: top;
+  white-space: nowrap;
+  position: relative;
+  border: 1px solid rgba(204,204,204,0.3);
+  background-color: rgba(255,255,255,0.3);
+}
+.dd-toggle:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-color: transparent transparent #ffc21d transparent;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+}
+.dd-toggle .dd-item-caption {
+  text-align: right;
+}
+.dd-items {
+  z-index: 999;
+  width: 100%;
+  padding: 10px 20px 20px;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+  font-weight: normal;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 3px 0px rgba(51,51,51,0.15), inset 0px -3px 0px 0px rgba(51,51,51,0.75);
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+}
+.dd-items.dd--is-hidden {
+  display: none;
+}
+.dd-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+}
+.dd-item-caption {
+  float: right;
+  width: 33.33%;
+  color: #999;
+  font-weight: 400;
+}
+.dd-item--is-alternative {
+  margin-top: 10px;
+  padding-top: 10px;
+  height: 40px;
+  line-height: 40px;
+}
+.dd-item--is-alternative:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ccc;
+  height: 1px;
+}
+.dd-item-link {
+  cursor: pointer;
+  color: #333;
+}
+.dd-item-link:hover {
+  color: #369;
+}
 .container {
   width: 90%;
   margin: 0 auto;
