@@ -1,3 +1,11 @@
+*
+*:before
+*:after
+  box-sizing inherit
+
+input[type="search"]
+  box-sizing border-box
+
 .dd-toggle-wrap
   box-sizing border-box
 
@@ -7,27 +15,6 @@
   font-size 16px
   line-height 38px
   font-family 'Whitney-Book', 'PT Sans', Arial, sans-serif
-
-
-  &.dd--is-opened
-    .dd-toggle
-      border-color rgba(204, 204, 204, 1)
-      &:before
-        border-color rgba(204, 204, 204, 1) transparent transparent transparent
-
-    .dd-toggle-content
-      &:before
-        border-width 0 8px 8px 0
-        border-color transparent #ccc transparent transparent
-
-        top 6px
-        bottom auto
-
-*
-*::before
-*::after
-  box-sizing inherit
-
 
 .dd-toggle
   display inline-block
@@ -73,14 +60,21 @@
       top 0
       right -19px
 
+  .dd-toggle-wrap--search-filter &
+    width 40px
 
-
+  // opened menu
+  .dd--is-opened &
+    border-color rgba(204, 204, 204, 1)
+    &:before
+      border-color rgba(204, 204, 204, 1) transparent transparent transparent
 
   .dd-item-caption
     text-align right
 
 .dd-toggle-content
   padding 0 34px 0 15px
+
   &:before
     content ''
     width 0
@@ -89,8 +83,19 @@
     border-width 0 0 8px 8px
     border-color transparent transparent #ffc21d transparent
     position absolute
-    bottom 6px
-    right 6px
+    bottom 5px
+    right 5px
+
+  .dd-toggle-wrap--search-filter &
+    padding 0 12px
+
+  // opened menu
+  .dd--is-opened &:before
+    border-width 0 8px 8px 0
+    border-color transparent #ccc transparent transparent
+
+    top 5px
+    bottom auto
 
 .dd-items
   z-index 999
@@ -142,6 +147,13 @@
       background #cccccc
       height 1px
 
+.dd-section
+  display block
+  width 100%
+  text-align left
+  height 50px
+  &__field-wrap
+    margin-left 88px
 
 .dd-item-link
   cursor pointer
@@ -149,4 +161,31 @@
   &:hover
     color #369
 
+.toggle-view-section
+  width 80px
+  height 40px
+  font-size 0
+  float left
+
+.toggle-view
+  text-align center
+  display inline-block
+  vertical-align top
+  position relative
+  border 1px solid rgba(204, 204, 204, .3)
+  width 40px
+  height 40px
+  line-height 38
+  .list-icon
+  .item-icon
+    opacity 0.3
+  .list-icon
+    margin-top 14px
+  .item-icon
+    margin-top 13px
+  &--is-active
+    border-color rgba(204, 204, 204, 1)
+    .list-icon
+    .item-icon
+      opacity 1
 

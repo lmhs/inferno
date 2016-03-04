@@ -51,12 +51,19 @@ app.module(function(app){
         var obj = this;
 
         obj.toggle.on( 'click', function ( event ) {
-          obj.menu.toggleClass('dd--is-hidden');
-          obj.dd.toggleClass('dd--is-opened');
+          if (obj.dd.hasClass('dd--is-opened')) {
+            $('.js-dd').find('.js-dd-items').addClass('dd--is-hidden');
+            $('.js-dd').removeClass('dd--is-opened');
+          } else {
+            $('.js-dd').find('.js-dd-items').addClass('dd--is-hidden');
+            $('.js-dd').removeClass('dd--is-opened');
+            obj.menu.removeClass('dd--is-hidden');
+            obj.dd.addClass('dd--is-opened');
+          }
           event.stopPropagation();
         });
 
-        if (obj.type === 'default' || obj.type === 'filter' ) {
+        if (obj.type === 'default' || obj.type === 'filter' || obj.type === 'searchFilter' ) {
           obj.opts.on( 'click', function () {
             var opt = $(this);
             if (opt.attr('data-value') !== obj.toggle.attr('data-selected')) {
@@ -75,7 +82,7 @@ app.module(function(app){
         }
       },
       setValue : function () {
-
+        return this.val;
       },
       getValue : function () {
         return this.val;
@@ -90,7 +97,8 @@ app.module(function(app){
     }
 
     window.onclick = function ( event ) {
-      if (!event.target.matches('.js-toggle-dd')) {
+      console.log(event.target)
+      if (!$(event.target).closest('.dd--is-opened').length) {
         var dropdowns = document.getElementsByClassName('js-dd');
         var i;
         for (i = 0; i < dropdowns.length; i++) {
@@ -100,7 +108,6 @@ app.module(function(app){
             currentDropdown.getElementsByClassName('js-dd-items')[0].classList.add('dd--is-hidden');
           }
         }
-
       }
     }
 
