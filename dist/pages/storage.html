@@ -44,9 +44,33 @@
       <div class="slider__field-wrap field-wrap">
         <input class="field input" min="1" max="64" step="1" type="number" id="sliderValue"></input>
       </div>
-      <div class="dd-toggle-wrap js-dd">
+      <div class="dd-toggle-wrap dd-toggle-wrap--filter js-dd js-dd-filter">
         <div class="dd-toggle js-toggle-dd" data-selected="default">
-          <div class="dd-toggle-txt js-toggle-dd-txt">
+          <div class="dd-toggle-content js-toggle-dd-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10"><path fill="none" stroke="#221F1F" stroke-width="2" d="M1 1h11M1 5h11M1 9h11" stroke-linecap="square"/></svg>
+          </div>
+        </div>
+        <ul class="dd-items dd--is-hidden js-dd-items">
+          <li class="dd-item">
+            <div data-value="default" class="dd-item-link dd-item-link--default dd-item-link--is-selected js-dd-item">
+              <span class="dd-item-title">По дате создания</span>
+            </div>
+          </li>
+          <li class="dd-item">
+            <div data-value="0" class="dd-item-link js-dd-item">
+              <span class="dd-item-title">По названию</span>
+            </div>
+          </li>
+          <li class="dd-item">
+            <div data-value="1" class="dd-item-link js-dd-item">
+              <span class="dd-item-title">По размеру файла</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="dd-toggle-wrap js-dd js-dd-panel">
+        <div class="dd-toggle js-toggle-dd" data-selected="default">
+          <div class="dd-toggle-content js-toggle-dd-content">
             <span class="dd-item-title">Без панели</span>
             <span class="dd-item-caption">Бесплатно</span>
           </div>
@@ -393,7 +417,8 @@
     return value === 10 ? 0 : 1;
   }
 
-  var dd = $('.js-dd').jqueryDropdown();
+  var dd = $('.js-dd-panel').jqueryDropdown();
+  var filter = $('.js-dd-filter').jqueryDropdown({type:"filter"});
 
 
   noUiSlider.create(slider, {

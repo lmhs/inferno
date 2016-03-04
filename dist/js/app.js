@@ -513,54 +513,68 @@ app.module(function(app){
   }(function ($) {
     'use strict';
 
-    function DropDown(el) {
+    function DropDown(el, options) {
       this.dd = el;
       this.toggle = this.dd.children('.js-toggle-dd');
-      this.placeholder = this.dd.find('.js-toggle-dd-txt');
+      this.placeholder = this.dd.find('.js-toggle-dd-content');
       this.menu = this.dd.find('.js-dd-items');
       this.opts = this.dd.find('.js-dd-item');
       this.val = '';
       this.index = -1;
+
+      var settings = $.extend({
+        type: "default"
+      }, options );
+
+      this.type = settings.type;
+
       this.initEvents();
     }
 
     DropDown.prototype = {
-      initEvents : function() {
+      initEvents : function () {
         var obj = this;
 
-        obj.toggle.on('click', function(event){
+        obj.toggle.on( 'click', function ( event ) {
           obj.menu.toggleClass('dd--is-hidden');
           obj.dd.toggleClass('dd--is-opened');
           event.stopPropagation();
         });
 
-        obj.opts.on('click',function(){
-          var opt = $(this);
-          if (opt.attr('data-value') !== obj.toggle.attr('data-selected')) {
-            obj.menu.find('.dd-item-link--is-selected').removeClass('dd-item-link--is-selected');
-            obj.val = opt.html();
-            obj.index = opt.index();
-            obj.placeholder.html(obj.val);
-            obj.toggle.attr('data-selected', opt.attr('data-value'));
-            opt.addClass('dd-item-link--is-selected');
-          }
-          obj.menu.toggleClass('dd--is-hidden');
-          obj.dd.toggleClass('dd--is-opened');
-        });
+        if (obj.type === 'default' || obj.type === 'filter' ) {
+          obj.opts.on( 'click', function () {
+            var opt = $(this);
+            if (opt.attr('data-value') !== obj.toggle.attr('data-selected')) {
+              obj.menu.find('.dd-item-link--is-selected').removeClass('dd-item-link--is-selected');
+              if (obj.type === 'default') {
+                obj.val = opt.html();
+                obj.index = opt.index();
+                obj.placeholder.html(obj.val);
+              }
+              obj.toggle.attr('data-selected', opt.attr('data-value'));
+              opt.addClass('dd-item-link--is-selected');
+            }
+            obj.menu.toggleClass('dd--is-hidden');
+            obj.dd.toggleClass('dd--is-opened');
+          });
+        }
       },
-      getValue : function() {
+      setValue : function () {
+
+      },
+      getValue : function () {
         return this.val;
       },
-      getIndex : function() {
+      getIndex : function () {
         return this.index;
       },
-      closeDD : function() {
+      closeDD : function () {
         this.menu.addClass('dd--is-hidden');
         this.dd.removeClass('dd--is-opened');
       }
     }
 
-    window.onclick = function(event) {
+    window.onclick = function ( event ) {
       if (!event.target.matches('.js-toggle-dd')) {
         var dropdowns = document.getElementsByClassName('js-dd');
         var i;
@@ -575,8 +589,9 @@ app.module(function(app){
       }
     }
 
-
-    $.fn.jqueryDropdown = function () { new DropDown(this); };
+    $.fn.jqueryDropdown = function ( options ) {
+      new DropDown( this, options );
+    };
   }));
 });
 
