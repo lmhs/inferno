@@ -1,0 +1,294 @@
+<style type="text/css">
+  .dropdowns-examples {
+    margin-top: 60px;
+    min-height: 500px;
+  }
+</style>
+<div class="container-content-solid page-storage-solid page-storage-solid--example">
+  <div class="slider-example">
+    <h2>NoUiSlider example</h2>
+    <div class="slider-wrap">
+      <ul class="slider-pip-list">
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="1" class="slider-pip js-slider-pip">1</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="2" class="slider-pip js-slider-pip">2</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="3" class="slider-pip js-slider-pip">3</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="4" class="slider-pip js-slider-pip">4</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="5" class="slider-pip js-slider-pip">5</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="6" class="slider-pip js-slider-pip">6</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="7" class="slider-pip js-slider-pip">7</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="8" class="slider-pip js-slider-pip">8</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="9" class="slider-pip js-slider-pip">9</a></li>
+        <li class="slider-pip-list__item"><a href="javascript:void(0);" data-num="10" class="slider-pip js-slider-pip">...</a></li>
+      </ul>
+      <div id="slider"></div>
+    </div>
+    <div class="slider__field-wrap field-wrap">
+      <input class="field input" min="1" max="64" step="1" type="number" id="sliderValue"></input>
+    </div>
+
+  </div>
+  <div class="dropdowns-examples">
+    <h2>Dropdowns examples</h2>
+    <div class="dd-toggle-wrap dd-toggle-wrap--filter dd-toggle-wrap--filter-example js-dd js-dd-filter">
+      <div class="dd-toggle js-toggle-dd" data-selected="default">
+        <div class="dd-toggle-content js-toggle-dd-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10"><path fill="none" stroke="#221F1F" stroke-width="2" d="M1 1h11M1 5h11M1 9h11" stroke-linecap="square"/></svg>
+        </div>
+      </div>
+      <ul class="dd-items dd--is-hidden js-dd-items">
+        <li class="dd-item">
+          <div data-value="default" class="dd-item-link dd-item-link--default dd-item-link--is-selected js-dd-item">
+            <span class="dd-item-title">По дате создания</span>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="0" class="dd-item-link js-dd-item">
+            <span class="dd-item-title">По названию</span>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="1" class="dd-item-link js-dd-item">
+            <span class="dd-item-title">По размеру файла</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="dd-toggle-wrap dd-toggle-wrap--caption dd-toggle-wrap--caption-example js-dd js-dd-panel">
+      <div class="dd-toggle js-toggle-dd" data-selected="default">
+        <div class="dd-toggle-content js-toggle-dd-content">
+          <span class="dd-item-title">Без панели</span>
+          <span class="dd-item-caption">Бесплатно</span>
+        </div>
+      </div>
+      <ul class="dd-items dd--is-hidden js-dd-items">
+        <li class="dd-item">
+          <div data-value="default" class="dd-item-link dd-item-link--default dd-item-link--is-selected js-dd-item">
+            <span class="dd-item-title">Без панели</span>
+            <span class="dd-item-caption">Бесплатно</span>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="0" class="dd-item-link js-dd-item">
+            <span class="dd-item-title">ISP Manager</span>
+            <span class="dd-item-caption">+ $5</span>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="1" class="dd-item-link js-dd-item">
+            <span class="dd-item-title">ISP Manager Pro</span>
+            <span class="dd-item-caption">+ $15</span>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="2" class="dd-item-link js-dd-item">
+            <span class="dd-item-title">Direct Admin</span>
+            <span class="dd-item-caption">+ $60</span>
+          </div>
+        </li>
+        <li class="dd-item dd-item--is-alternative">
+          <div data-value="alt" class="dd-item-link js-dd-item">Menu Item Alternative</div>
+        </li>
+      </ul>
+    </div>
+    <div class="dd-toggle-wrap dd-toggle-wrap--search-filter dd-toggle-wrap--search-filter-example js-dd js-dd-search-filter">
+      <div class="dd-toggle js-toggle-dd" data-selected="default">
+        <div class="dd-toggle-content js-toggle-dd-content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10"><path fill="none" stroke="#221F1F" stroke-width="2" d="M1 1h11M1 5h11M1 9h11" stroke-linecap="square"/></svg>
+        </div>
+      </div>
+      <ul class="dd-items dd-items--right-to-left dd--is-hidden js-dd-items">
+        <li class="dd-section">
+          <div class="toggle-view-section js-toggle-view-section">
+            <a class="toggle-view toggle-view--is-active js-toggle-view" data-value="list" href="javascript:void(0);">
+              <svg class="list-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10"><g fill="#231F20" fill-rule="evenodd"><rect width="9" height="2" x="5" rx="8"/><rect width="4" height="2" rx="8"/><rect width="9" height="2" x="5" y="4" rx="8"/><rect width="4" height="2" y="4" rx="8"/><rect width="9" height="2" x="5" y="8" rx="8"/><rect width="4" height="2" y="8" rx="8"/></g></svg>
+            </a>
+            <a class="toggle-view js-toggle-view" data-value="item" href="javascript:void(0);">
+              <svg class="item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14"><rect width="14" height="12" x="1" y="1" fill="none" fill-rule="evenodd" stroke="#231F20" stroke-width="2" rx="2"/></svg>
+            </a>
+          </div>
+          <div class="field-wrap dd-section__field-wrap">
+            <input type="search" autocomplete="off" placeholder="Быстрый поиск" class="input field field--is-search">
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="default" class="dd-item-link dd-item-link--default dd-item-link--is-selected js-dd-item">
+            <span class="dd-item-title">По дате создания</span>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="0" class="dd-item-link js-dd-item">
+            <span class="dd-item-title">По названию</span>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="1" class="dd-item-link js-dd-item">
+            <span class="dd-item-title">По размеру файла</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="dd-toggle-wrap dd-toggle-wrap--check-filter dd-toggle-wrap--check-filter-example js-dd js-dd-check-filter">
+      <div class="dd-toggle js-toggle-dd">
+        <div class="dd-toggle-content js-toggle-dd-content">
+          Фильтры
+        </div>
+      </div>
+      <ul class="dd-items dd--is-hidden js-dd-items">
+        <li class="dd-item">
+          <div data-value="default" class="dd-item-link dd-item-link--default dd-item-link--is-selected js-dd-item">
+            <div class="checkbox checkbox--color-label">
+              <input id="filterCheckbox1" type="checkbox" name="filterCheckbox" class="checkbox-element">
+              <label for="filterCheckbox1" class="checkbox-label">
+                <span class="checkbox-text">Перезагрузки</span>
+                <span class="check-color check-color--999"></span>
+              </label>
+            </div>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="0" class="dd-item-link js-dd-item">
+
+            <div class="checkbox checkbox--color-label">
+              <input id="filterCheckbox2" type="checkbox" name="filterCheckbox" class="checkbox-element">
+              <label for="filterCheckbox2" class="checkbox-label">
+                <span class="checkbox-text">Ошибки</span>
+                <span class="check-color check-color--d74d54"></span>
+              </label>
+            </div>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="1" class="dd-item-link js-dd-item">
+
+            <div class="checkbox checkbox--color-label">
+              <input id="filterCheckbox3" type="checkbox" name="filterCheckbox" class="checkbox-element">
+              <label for="filterCheckbox3" class="checkbox-label">
+                <span class="checkbox-text">Системные отчеты</span>
+                <span class="check-color check-color--506077"></span>
+              </label>
+            </div>
+          </div>
+        </li>
+        <li class="dd-item">
+          <div data-value="1" class="dd-item-link js-dd-item">
+
+            <div class="checkbox checkbox--color-label">
+              <input id="filterCheckbox4" type="checkbox" name="filterCheckbox" class="checkbox-element">
+              <label for="filterCheckbox4" class="checkbox-label">
+                <span class="checkbox-text">События</span>
+                <span class="check-color check-color--0094b3"></span>
+              </label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<script>
+  var ddPanel = $('.js-dd-panel').jqueryDropdown();
+  var ddFilter = $('.js-dd-filter').jqueryDropdown({type:"filter"});
+  var ddSearchFilter = $('.js-dd-search-filter').jqueryDropdown({type:"searchFilter"});
+  var ddCheckFilter = $('.js-dd-check-filter').jqueryDropdown({type:"checkFilter"});
+
+  $('.js-toggle-view').on('click', function () {
+    var self = $(this);
+    var activeClass = 'toggle-view--is-active';
+    if (!self.hasClass(activeClass)) {
+      self.closest('.js-toggle-view-section').find('.js-toggle-view').removeClass(activeClass);
+      self.addClass(activeClass);
+    }
+  });
+
+  var slider = document.getElementById('slider');
+
+  function filterLast( value, type ) {
+    return value === 10 ? 0 : 1;
+  }
+
+  noUiSlider.create(slider, {
+    start: [1],
+    step: 1,
+    range: {
+      'min': 1,
+      'max': 10
+    },
+    format: {
+      to: function ( value ) {
+        return value;
+      },
+      from: function ( value ) {
+        return value.replace('.00', '');
+      }
+    }
+  });
+
+  var sliderValue = document.getElementById('sliderValue');
+  var pips = document.querySelectorAll('.js-slider-pip');
+
+  slider.noUiSlider.on('update', function( values, handle ) {
+    if (values[handle] < 10) {
+      sliderValue.disabled = true;
+      sliderValue.parentNode.classList.add('field-wrap--is-disabled');
+    } else {
+      sliderValue.disabled = false;
+      sliderValue.parentNode.classList.remove('field-wrap--is-disabled');
+    }
+    sliderValue.value = values[handle];
+    Array.prototype.forEach.call(pips, function(pip, i){
+      pip.classList.remove('slider-pip--is-active');
+      if (pip.dataset.num == values[handle]) {
+        pip.classList.add('slider-pip--is-active');
+      }
+    });
+  });
+
+  function setValue () {
+    var value = this.dataset.num;
+    slider.noUiSlider.set( value );
+
+    setCurrentPip(this);
+
+    return value;
+  }
+
+  // set current pip active
+  function setCurrentPip (element) {
+    Array.prototype.forEach.call(pips, function ( pip, i ){
+      pip.classList.remove('slider-pip--is-active');
+    });
+
+    element.classList.add('slider-pip--is-active');
+  }
+
+  Array.prototype.forEach.call(pips, function(pip, i){
+    pip.addEventListener('click', setValue, false)
+  });
+
+  sliderValue.addEventListener('change', function(ev){
+    if (ev.which < 48 || ev.which > 57) {
+      ev.preventDefault();
+    }
+
+    value = this.value;
+
+    if (value < 1 || value === null) {
+      this.value = 1;
+      slider.noUiSlider.set(value);
+      ev.preventDefault();
+    } else if (value > 64) {
+      slider.noUiSlider.set(10);
+      this.value = 64;
+      ev.preventDefault();
+    } else if (value > 10 && value <= 64 ){
+      slider.noUiSlider.set(10);
+      this.value = value;
+    } else {
+      slider.noUiSlider.set(value);
+    }
+  })
+
+
+
+</script>
