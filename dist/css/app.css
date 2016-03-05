@@ -1297,6 +1297,7 @@ input[type='checkbox'].checkbox-element {
   line-height: 20px;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .checkbox-label:before {
   visibility: visible;
@@ -1344,10 +1345,19 @@ input[type="search"] {
 .dd-toggle-wrap {
   box-sizing: border-box;
   position: relative;
+  display: inline-block;
+  vertical-align: top;
   height: 40px;
   font-size: 16px;
   line-height: 38px;
   font-family: 'Whitney-Book', 'PT Sans', Arial, sans-serif;
+}
+.dd-toggle-wrap--filter {
+  width: 60px;
+  margin-right: 20px;
+}
+.dd-toggle-wrap--search-filter {
+  width: 40px;
 }
 .dd-toggle {
   display: inline-block;
@@ -1363,7 +1373,6 @@ input[type="search"] {
   background-color: #fff;
 }
 .dd-toggle-wrap--filter .dd-toggle {
-  width: 60px;
   border-right: none;
 }
 .dd-toggle-wrap--filter .dd-toggle:before {
@@ -1387,9 +1396,6 @@ input[type="search"] {
   position: absolute;
   top: 0;
   right: -19px;
-}
-.dd-toggle-wrap--search-filter .dd-toggle {
-  width: 40px;
 }
 .dd--is-opened .dd-toggle {
   border-color: #ccc;
@@ -1441,6 +1447,17 @@ input[type="search"] {
 .dd-items.dd--is-hidden {
   display: none;
 }
+.dd-items--right-to-left {
+  left: auto;
+}
+.dd-toggle-wrap--check-filter .dd-items {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.dd-toggle-wrap--search-filter .dd-items {
+  padding-left: 12px;
+  padding-right: 12px;
+}
 .dd-item {
   position: relative;
   display: block;
@@ -1470,6 +1487,10 @@ input[type="search"] {
   background: #ccc;
   height: 1px;
 }
+.dd-toggle-wrap--search-filter .dd-item {
+  padding-left: 3px;
+  padding-right: 3px;
+}
 .dd-section {
   display: block;
   width: 100%;
@@ -1482,6 +1503,9 @@ input[type="search"] {
 .dd-item-link {
   cursor: pointer;
   color: #333;
+}
+.dd-toggle-wrap--check-filter .dd-item-link {
+  cursor: default;
 }
 .dd-item-link:hover {
   color: #369;
@@ -1536,6 +1560,18 @@ input[type="search"] {
 }
 .check-color--0094b3 {
   background-color: #0094b3;
+}
+.dd-toggle-wrap--filter-example .dd-items {
+  width: 174px;
+}
+.dd-toggle-wrap--search-filter-example .dd-items {
+  width: 320px;
+}
+.dd-toggle-wrap--caption-example {
+  width: 320px;
+}
+.dd-toggle-wrap--check-filter-example {
+  width: 280px;
 }
 .container {
   width: 90%;

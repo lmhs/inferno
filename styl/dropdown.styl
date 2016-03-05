@@ -11,10 +11,21 @@ input[type="search"]
 
   position relative
 
+  display inline-block
+  vertical-align top
+
   height 40px
   font-size 16px
   line-height 38px
   font-family 'Whitney-Book', 'PT Sans', Arial, sans-serif
+
+  &--filter
+    width 60px
+    margin-right 20px
+
+  &--search-filter
+    width 40px
+
 
 .dd-toggle
   display inline-block
@@ -36,7 +47,6 @@ input[type="search"]
   background-color rgba(255,255,255,1)
 
   .dd-toggle-wrap--filter &
-    width 60px
     border-right none
     &:before
       content ''
@@ -60,8 +70,6 @@ input[type="search"]
       top 0
       right -19px
 
-  .dd-toggle-wrap--search-filter &
-    width 40px
 
   // opened menu
   .dd--is-opened &
@@ -118,6 +126,18 @@ input[type="search"]
   &.dd--is-hidden
     display none
 
+  &--right-to-left
+    left auto
+
+
+  .dd-toggle-wrap--check-filter &
+    padding-left 15px
+    padding-right 15px
+
+  .dd-toggle-wrap--search-filter &
+    padding-left 12px
+    padding-right 12px
+
 .dd-item
   position relative
 
@@ -147,6 +167,10 @@ input[type="search"]
       background #cccccc
       height 1px
 
+  .dd-toggle-wrap--search-filter &
+    padding-left 3px
+    padding-right 3px
+
 .dd-section
   display block
   width 100%
@@ -158,6 +182,8 @@ input[type="search"]
 .dd-item-link
   cursor pointer
   color #333
+  .dd-toggle-wrap--check-filter &
+    cursor default
   &:hover
     color #369
 
@@ -203,3 +229,14 @@ input[type="search"]
   &--0094b3
     background-color #0094B3
 
+.dd-toggle-wrap--filter-example .dd-items
+  width 174px
+
+.dd-toggle-wrap--search-filter-example .dd-items
+  width 320px
+
+.dd-toggle-wrap--caption-example
+  width 320px
+
+.dd-toggle-wrap--check-filter-example
+  width 280px

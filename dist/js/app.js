@@ -582,7 +582,7 @@ app.module(function(app){
     }
 
     window.onclick = function ( event ) {
-      if (!$(event.target).closest('.dd--is-opened').length) {
+      if (!$(event.target).closest('.js-dd-items').length && !$('.js-toggle-dd').is(event.target)) {
         var dropdowns = document.getElementsByClassName('js-dd');
         var i;
         for (i = 0; i < dropdowns.length; i++) {
