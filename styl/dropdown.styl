@@ -1,37 +1,37 @@
+*
+*:before
+*:after
+  box-sizing inherit
+
+input[type="search"]
+  box-sizing border-box
+
 .dd-toggle-wrap
   box-sizing border-box
 
   position relative
 
-  height 42px
-  background-color #FFF
+  display inline-block
+  vertical-align top
+
+  height 40px
   font-size 16px
-  line-height 40px
+  line-height 38px
   font-family 'Whitney-Book', 'PT Sans', Arial, sans-serif
 
-  &.dd--is-opened
-    .dd-toggle
-      background-color #FFF
-      border-color rgba(204, 204, 204, 1)
-      &:after
-        border-width 0 8px 8px 0
-        border-color transparent #ccc transparent transparent
+  &--filter
+    width 60px
+    margin-right 20px
 
-        top 6px
-        bottom auto
-
-*
-*::before
-*::after
-  box-sizing inherit
+  &--search-filter
+    width 40px
 
 
 .dd-toggle
   display inline-block
 
   width 100%
-  height 42px
-  padding 0 34px 0 15px
+  height 40px
 
   cursor pointer
 
@@ -44,9 +44,46 @@
 
   border 1px solid rgba(204, 204, 204, .3)
 
-  background-color rgba(255,255,255,.3)
+  background-color rgba(255,255,255,1)
 
-  &:after
+  .dd-toggle-wrap--filter &
+    border-right none
+    &:before
+      content ''
+      width 0
+      height 0
+      border-style solid
+      border-width 40px 20px 0 0
+      border-color rgba(204, 204, 204, .3) transparent transparent transparent
+      position absolute
+      top -1px
+      right -20px
+
+    &:after
+      content ''
+      width 0
+      height 0
+      border-style solid
+      border-width 38px 19px 0 0
+      border-color #fff transparent transparent transparent
+      position absolute
+      top 0
+      right -19px
+
+
+  // opened menu
+  .dd--is-opened &
+    border-color rgba(204, 204, 204, 1)
+    &:before
+      border-color rgba(204, 204, 204, 1) transparent transparent transparent
+
+  .dd-item-caption
+    text-align right
+
+.dd-toggle-content
+  padding 0 34px 0 15px
+
+  &:before
     content ''
     width 0
     height 0
@@ -54,11 +91,19 @@
     border-width 0 0 8px 8px
     border-color transparent transparent #ffc21d transparent
     position absolute
-    bottom 6px
-    right 6px
+    bottom 5px
+    right 5px
 
-  .dd-item-caption
-    text-align right
+  .dd-toggle-wrap--search-filter &
+    padding 0 12px
+
+  // opened menu
+  .dd--is-opened &:before
+    border-width 0 8px 8px 0
+    border-color transparent #ccc transparent transparent
+
+    top 5px
+    bottom auto
 
 .dd-items
   z-index 999
@@ -74,12 +119,24 @@
   box-shadow 0px 2px 3px 0px rgba(51, 51, 51, 0.15), inset 0px -3px 0px 0px rgba(51,51,51,0.75);
 
   position absolute
-  top 40px
+  top 38px
   left 0
   right 0
 
   &.dd--is-hidden
     display none
+
+  &--right-to-left
+    left auto
+
+
+  .dd-toggle-wrap--check-filter &
+    padding-left 15px
+    padding-right 15px
+
+  .dd-toggle-wrap--search-filter &
+    padding-left 12px
+    padding-right 12px
 
 .dd-item
   position relative
@@ -110,10 +167,76 @@
       background #cccccc
       height 1px
 
+  .dd-toggle-wrap--search-filter &
+    padding-left 3px
+    padding-right 3px
+
+.dd-section
+  display block
+  width 100%
+  text-align left
+  height 50px
+  &__field-wrap
+    margin-left 88px
 
 .dd-item-link
   cursor pointer
   color #333
+  .dd-toggle-wrap--check-filter &
+    cursor default
   &:hover
     color #369
 
+.toggle-view-section
+  width 80px
+  height 40px
+  font-size 0
+  float left
+
+.toggle-view
+  text-align center
+  display inline-block
+  vertical-align top
+  position relative
+  border 1px solid rgba(204, 204, 204, .3)
+  width 40px
+  height 40px
+  line-height 38
+  .list-icon
+  .item-icon
+    opacity 0.3
+  .list-icon
+    margin-top 14px
+  .item-icon
+    margin-top 13px
+  &--is-active
+    border-color rgba(204, 204, 204, 1)
+    .list-icon
+    .item-icon
+      opacity 1
+
+.check-color
+  display inline-block
+  vertical-align top
+  width 60px
+  height 20px
+  &--999
+    background-color #999
+  &--d74d54
+    background-color #d74d54
+  &--506077
+    background-color #506077
+  &--0094b3
+    background-color #0094B3
+
+.dd-toggle-wrap--filter-example .dd-items
+  width 174px
+
+.dd-toggle-wrap--search-filter-example .dd-items
+  width 320px
+
+.dd-toggle-wrap--caption-example
+  width 320px
+
+.dd-toggle-wrap--check-filter-example
+  width 280px
