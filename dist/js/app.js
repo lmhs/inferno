@@ -566,9 +566,6 @@ app.module(function(app){
           });
         }
       },
-      setValue : function () {
-        return this.val;
-      },
       getValue : function () {
         return this.val;
       },

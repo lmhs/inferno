@@ -1397,10 +1397,12 @@ input[type="search"] {
   top: 0;
   right: -19px;
 }
-.dd--is-opened .dd-toggle {
+.dd--is-opened .dd-toggle,
+.dd-toggle:hover {
   border-color: #ccc;
 }
-.dd--is-opened .dd-toggle:before {
+.dd--is-opened .dd-toggle:before,
+.dd-toggle:hover:before {
   border-color: #ccc transparent transparent transparent;
 }
 .dd-toggle .dd-item-caption {
