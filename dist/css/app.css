@@ -1258,6 +1258,81 @@ input[type='number']::-webkit-inner-spin-button {
 .knowledge__label {
   padding-left: 6px;
 }
+.checkbox {
+  font-size: 0;
+}
+.checkbox-element {
+  visibility: hidden;
+  border: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.checkbox-element:checked + label:before {
+  background-color: #231f20;
+  box-shadow: inset 0px 10px 0px 0px rgba(255,255,255,0.05);
+}
+.checkbox-element:checked + label:after {
+  top: 4px;
+  left: 5px;
+  border-radius: 0;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #ffc21d;
+  border-left: 2px solid #ffc21d;
+  background: none;
+  opacity: 1;
+  width: 10px;
+  height: 7px;
+}
+input[type='checkbox'].checkbox-element {
+  margin-left: -20px;
+  top: 0;
+  margin-top: 0;
+}
+.checkbox-label {
+  font-size: 16px;
+  padding-left: 25px;
+  min-height: 20px;
+  line-height: 20px;
+  position: relative;
+  display: inline-block;
+}
+.checkbox-label:before {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '';
+  background-color: rgba(35,31,32,0.1);
+  box-shadow: inset 0px 10px 0px 0px rgba(255,255,255,0.05);
+  cursor: pointer;
+below(4)
+}
+.checkbox-label:after {
+  position: absolute;
+  content: '';
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0;
+  background-color: #231f20;
+  opacity: 0.1;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  transition: border 0.1s;
+}
+.checkbox--color-label .checkbox-label {
+  width: 100%;
+}
+.checkbox--color-label .check-color {
+  float: right;
+  margin-left: 28px;
+}
 *,
 *:before,
 *:after {
@@ -1443,6 +1518,24 @@ input[type="search"] {
 .toggle-view--is-active .list-icon,
 .toggle-view--is-active .item-icon {
   opacity: 1;
+}
+.check-color {
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  height: 20px;
+}
+.check-color--999 {
+  background-color: #999;
+}
+.check-color--d74d54 {
+  background-color: #d74d54;
+}
+.check-color--506077 {
+  background-color: #506077;
+}
+.check-color--0094b3 {
+  background-color: #0094b3;
 }
 .container {
   width: 90%;

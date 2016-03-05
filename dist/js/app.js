@@ -582,7 +582,6 @@ app.module(function(app){
     }
 
     window.onclick = function ( event ) {
-      console.log(event.target)
       if (!$(event.target).closest('.dd--is-opened').length) {
         var dropdowns = document.getElementsByClassName('js-dd');
         var i;

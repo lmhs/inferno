@@ -105,6 +105,62 @@
           </li>
         </ul>
       </div>
+      <div class="dd-toggle-wrap dd-toggle-wrap--check-filter js-dd js-dd-check-filter">
+        <div class="dd-toggle js-toggle-dd">
+          <div class="dd-toggle-content js-toggle-dd-content">
+            Фильтры
+          </div>
+        </div>
+        <ul class="dd-items dd--is-hidden js-dd-items">
+          <li class="dd-item">
+            <div data-value="default" class="dd-item-link dd-item-link--default dd-item-link--is-selected js-dd-item">
+              <div class="checkbox checkbox--color-label">
+                <input id="filterCheckbox1" type="checkbox" name="filterCheckbox" class="checkbox-element">
+                <label for="filterCheckbox1" class="checkbox-label">
+                  <span class="checkbox-text">Перезагрузки</span>
+                  <span class="check-color check-color--999"></span>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="dd-item">
+            <div data-value="0" class="dd-item-link js-dd-item">
+
+              <div class="checkbox checkbox--color-label">
+                <input id="filterCheckbox2" type="checkbox" name="filterCheckbox" class="checkbox-element">
+                <label for="filterCheckbox2" class="checkbox-label">
+                  <span class="checkbox-text">Ошибки</span>
+                  <span class="check-color check-color--d74d54"></span>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="dd-item">
+            <div data-value="1" class="dd-item-link js-dd-item">
+
+              <div class="checkbox checkbox--color-label">
+                <input id="filterCheckbox3" type="checkbox" name="filterCheckbox" class="checkbox-element">
+                <label for="filterCheckbox3" class="checkbox-label">
+                  <span class="checkbox-text">Системные отчеты</span>
+                  <span class="check-color check-color--506077"></span>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="dd-item">
+            <div data-value="1" class="dd-item-link js-dd-item">
+
+              <div class="checkbox checkbox--color-label">
+                <input id="filterCheckbox4" type="checkbox" name="filterCheckbox" class="checkbox-element">
+                <label for="filterCheckbox4" class="checkbox-label">
+                  <span class="checkbox-text">События</span>
+                  <span class="check-color check-color--0094b3"></span>
+                </label>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
       <div class="dd-toggle-wrap js-dd js-dd-panel">
         <div class="dd-toggle js-toggle-dd" data-selected="default">
           <div class="dd-toggle-content js-toggle-dd-content">
@@ -457,6 +513,7 @@
   var ddPanel = $('.js-dd-panel').jqueryDropdown();
   var ddFilter = $('.js-dd-filter').jqueryDropdown({type:"filter"});
   var ddSearchFilter = $('.js-dd-search-filter').jqueryDropdown({type:"searchFilter"});
+  var ddCheckFilter = $('.js-dd-check-filter').jqueryDropdown({type:"checkFilter"});
 
   $('.js-toggle-view').on('click', function () {
     var self = $(this);
